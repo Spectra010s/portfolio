@@ -50,7 +50,7 @@
 
 :root {
   --radius: 0.625rem;
-  --background: oklch(1 0 0);
+  --background: oklch(0.141 0.005 285.823);
   --foreground: oklch(0.129 0.042 264.695);
   --card: oklch(1 0 0);
   --card-foreground: oklch(0.129 0.042 264.695);
@@ -81,12 +81,13 @@
   --sidebar-accent-foreground: oklch(0.208 0.042 265.755);
   --sidebar-border: oklch(0.929 0.013 255.508);
   --sidebar-ring: oklch(0.704 0.04 256.788);
-  --grid-line: rgba(0, 0, 0, 0.05);
+  --grid-line: rgba(128, 128, 128, 0.07);
   --grid-size: 40px 40px;
+
 }
 
 .dark {
-  --background: oklch(0.129 0.042 264.695);
+  --background: oklch(0.141 0.005 285.823);
   --foreground: oklch(0.984 0.003 247.858);
   --card: oklch(0.208 0.042 265.755);
   --card-foreground: oklch(0.984 0.003 247.858);
@@ -126,16 +127,16 @@
     @apply border-border outline-ring/50 transition-colors duration-200;
   }
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground bg-grid-pattern;
+    background-size: var(--grid-size);
   }
-
+  
   /* Add custom shadow effects */
   .shadow-glow {
     box-shadow: 0 0 20px rgba(59, 130, 246, 0.3);
   }
 }
 
-/* Add smooth scrolling */
 html {
   scroll-behavior: smooth;
 }

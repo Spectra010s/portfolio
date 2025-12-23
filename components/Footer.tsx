@@ -3,7 +3,7 @@ import { Github, Twitter, MessageCircle } from "lucide-react"
 
 export default function Footer() {
   return (
-    <footer className="py-16 px-6 border-t border-white/10 bg-[#0a0a0c] bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:40px_40px]">
+    <footer className="py-16 px-6 border-t border-white/10 ">
       <div className="container mx-auto max-w-6xl text-center">
         <p className="text-muted-foreground mb-4">hardly working 🤞 - Doing what is doable</p>
         <div className="flex justify-center gap-4">

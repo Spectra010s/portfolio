@@ -52,9 +52,10 @@ export default function Home() {
   ]
 
   const skills = [
-    { name: "Frontend", items: ["React", "TypeScript", "HTML/CSS", "Tailwind CSS"] },
-    { name: "Backend", items: ["Node.js", "Express", "PostgreSQL", "Prisma"] },
-    { name: "Tools", items: ["Git", "Firebase", "Socket.IO", "Vercel"] },
+    { name: "Frontend", items: ["React", "Nextjs", "TypeScript", "HTML/CSS", "Tailwind CSS"] },
+    { name: "Languages", items: ["Typescript", "JavaScipt", "Python", "C++", "HTML", "CSS", "Nodejs", "PlpgSQL"]},
+    { name: "Backend", items: ["Node.js", "Express", "PostgreSQL", "Prisma", "Supabase", "MySQL"] },
+    { name: "Tools", items: ["Git", "Github", "Supabase", "Acode", "Firebase", "Socket.IO", "Vercel"] },
     { name: "Web3", items: ["Blockchain", "DApps", "Smart Contracts", "Web3.js"] },
   ]
 
@@ -67,7 +68,7 @@ export default function Home() {
 
   return (
     <>
-      <div className="min-h-screen flex flex-col flex-1 bg-[#0a0a0c] bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:40px_40px] relative overflow-hidden">
+      <div className="min-h-screen flex flex-col flex-1 relative overflow-hidden">
         {/* Animated gradient orbs */}
         <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-purple-600/10 rounded-full blur-3xl animate-pulse"></div>
         <div className="absolute bottom-1/3 right-1/4 w-80 h-80 bg-indigo-600/10 rounded-full blur-3xl animate-pulse delay-1000"></div>
@@ -193,7 +194,7 @@ export default function Home() {
 
         {/* Projects Section */}
         {tab === "projects" && (
-          <section className="py-8 md:px-6 px-3 relative z-10">
+          <section className="py-8 md:px-6 px-3 relative z-10 ">
             <div className="container mx-auto max-w-6xl">
               <div className="grid grid-cols-1 gap-8 w-full gap-8">
                 {projects.map((project) => (
@@ -307,7 +308,7 @@ export default function Home() {
 
         {/* Skills Section */}
         {tab === "skills" && (
-          <section className="py-8 px-6 relative z-10">
+          <section className="py-8 px-6 relative z-10 ">
             <div className="container mx-auto max-w-6xl">
               <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
                 {skills.map((skillGroup) => (
@@ -340,7 +341,7 @@ export default function Home() {
 
         {/* Achievements Section */}
         {tab === "achievements" && (
-          <section className="py-8 px-6 relative z-10">
+          <section className="py-8 px-6 relative z-10 ">
             <div className="container mx-auto max-w-6xl">
               <div className="grid md:grid-cols-2 gap-6">
                 {achievements.map((achievement) => (
