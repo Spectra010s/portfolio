@@ -59,13 +59,6 @@ export default function Home() {
     { name: "Web3", items: ["Blockchain", "DApps", "Smart Contracts", "Web3.js"] },
   ]
 
-  const achievements = [
-    { name: "Quickdraw", description: "Opened a pull request within 5 minutes of creation" },
-    { name: "Pull Shark", description: "Opened pull requests in multiple repositories" },
-    { name: "Pair Extraordinaire", description: "Collaborated on multiple projects" },
-    { name: "YOLO", description: "Merged code without review" },
-  ]
-
   return (
     <>
       <div className="min-h-screen flex flex-col flex-1 relative overflow-hidden">
@@ -173,7 +166,7 @@ export default function Home() {
           <div className="container mx-auto max-w-6xl">
             <div className="flex justify-center mb-12">
               <div className="bg-black/40 backdrop-blur-md border border-white/10 rounded-full p-1.5 shadow-2xl">
-                {["projects", "skills", "achievements"].map((active) => (
+                {["projects", "skills"].map((active) => (
                   <Button
                     key={active}
                     variant={active === tab ? "default" : "ghost"}
@@ -332,30 +325,6 @@ export default function Home() {
                         ))}
                       </div>
                     </CardContent>
-                  </Card>
-                ))}
-              </div>
-            </div>
-          </section>
-        )}
-
-        {/* Achievements Section */}
-        {tab === "achievements" && (
-          <section className="py-8 px-6 relative z-10 ">
-            <div className="container mx-auto max-w-6xl">
-              <div className="grid md:grid-cols-2 gap-6">
-                {achievements.map((achievement) => (
-                  <Card
-                    key={achievement.name}
-                    className="hover:shadow-2xl hover:shadow-blue-500/20 transition-all duration-300 hover:-translate-y-1 border-white/10 bg-white/[0.02] backdrop-blur-xl hover:border-blue-500/50"
-                  >
-                    <CardHeader>
-                      <CardTitle className="text-lg flex items-center gap-2 text-white">
-                        <Shield className="w-5 h-5 text-blue-400" />
-                        {achievement.name}
-                      </CardTitle>
-                      <CardDescription className="text-gray-300">{achievement.description}</CardDescription>
-                    </CardHeader>
                   </Card>
                 ))}
               </div>

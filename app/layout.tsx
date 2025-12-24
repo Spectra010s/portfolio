@@ -26,7 +26,7 @@ export const metadata: Metadata = {
     type: "website",
     locale: "en_US",
     url: "https://spectra010s.vercel.app",
-    title: "Spectra010s | Adeloye Adetayo - Full Stack Developer",
+    title: "Spectra010s | Adeloye Adetayo",
     description:
       "Creative technologist exploring Web3 and hardware. Mechatronist building innovative solutions with curiosity.",
     siteName: "Spectra010s Portfolio",
@@ -42,10 +42,17 @@ export const metadata: Metadata = {
 
   twitter: {
     card: "summary_large_image",
-    title: "Spectra010s | Adeloye Adetayo - Full Stack Developer",
+    title: "Spectra010s | Adeloye Adetayo",
     description: "Creative technologist exploring Web3 and hardware. Mechatronist building innovative solutions.",
     creator: "@spectra010s",
-    images: ["/og-image.png"],
+    images: [
+      {
+        url: "/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: "Spectra010s - Full Stack Developer Portfolio",
+      },
+    ],
   },
 
   robots: {
