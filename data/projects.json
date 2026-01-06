@@ -1,6 +1,21 @@
 [
+   {
+     "id": 1,
+    "name": "My Campus Library",
+    "description": "A web library for students made by a student",
+    "longDescription": "An open-source digital library and study desk for students and faculty, providing access to academic materials and focused on empowering knowledge for every student.",
+    "tech": ["TypeScript", "Reactjs", "Nextjs", "supabase"],
+    "stars": 3,
+    "forks": 0,
+    "language": "TypeScript",
+    "demo": "https://mycampuslib.vercel.app",
+    "github": "https://github.com/Spectra010s/mcl",
+    "status": "Production",
+    "category": "Full-stack",
+    "screen": "/placeholder.svg?height=675&width=1200"
+  },
   {
-    "id": 1,
+    "id": 2,
     "name": "Biuld",
     "description": "Modern desktop messaging platform for developers with real-time chat, code sharing, and collaboration features",
     "longDescription": "A production-ready desktop chat application built for developers, featuring real-time messaging, code sharing, file attachments, and advanced collaboration features. Built with React, Node.js, Socket.IO, and PostgreSQL.",
@@ -15,7 +30,7 @@
     "screen": "/placeholder.svg?height=675&width=1200"
   },
   {
-    "id": 2,
+    "id": 3,
     "name": "Starms Catering",
     "description": "Modern catering website with user reviews, event gallery, and admin dashboard",
     "longDescription": "A comprehensive catering website featuring responsive design, user review system, event gallery, contact forms, and Firebase-powered admin dashboard for content management.",
@@ -30,7 +45,7 @@
     "screen": "/placeholder.svg?height=675&width=1200"
   },
   {
-    "id": 3,
+    "id": 4,
     "name": "Honeycomb Nexus",
     "description": "Interactive Web3 experience showcasing the Honeycomb Discovery Layer",
     "longDescription": "An immersive Web3 application that demonstrates blockchain interaction through dynamic gameplay and on-chain identity features, built with modern web technologies.",

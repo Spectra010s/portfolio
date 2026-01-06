@@ -43,10 +43,12 @@ export default function Home() {
       element.scrollIntoView({ behavior: "smooth" })
     }
   }
-
+  const totalstars = projects.reduce((sum, project) => sum + project.stars, 0);
+  
+  
   const stats = [
     { label: "Total Repositories", value: "10+", icon: Code },
-    { label: "GitHub Stars", value: "8+", icon: Star },
+    { label: "GitHub Stars", value: totalstars.toString(), icon: Star },
     { label: "Active Projects", value: "4", icon: Zap },
     { label: "Contributions", value: "277", icon: Users },
   ]
@@ -74,7 +76,7 @@ export default function Home() {
               <div className="relative">
                 <div className="absolute inset-0 bg-blue-500/20 blur-2xl rounded-full"></div>
                 <img
-                  src="https://avatars.githubusercontent.com/u/197895409?v=4"
+                  src="/s.jpeg"
                   alt="Spectra - Tayo"
                   className="relative w-32 h-32 rounded-full border-4 border-white/10 shadow-2xl"
                 />
