@@ -1,0 +1,347 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Welcome to 2026!</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Mountains+of+Christmas:wght@700&family=Poppins:wght@300;400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: "Poppins", sans-serif;
+        background: linear-gradient(to bottom, #0a0a2a, #1a0033);
+        color: white;
+        min-height: 100vh;
+        overflow-x: hidden;
+        position: relative;
+      }
+
+      .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 20px;
+        position: relative;
+        z-index: 10;
+      }
+
+      header {
+        text-align: center;
+        padding: 40px 0;
+      }
+
+      .logo {
+        font-size: 2.5rem;
+        color: #ffd700;
+        margin-bottom: 10px;
+      }
+
+      .main-title {
+        font-family: "Mountains of Christmas", cursive;
+        font-size: 5rem;
+        text-align: center;
+        margin: 30px 0;
+        text-shadow:
+          0 0 10px #ff0066,
+          0 0 20px #ff0066,
+          0 0 30px #ff0066;
+        color: #ffffff;
+        letter-spacing: 2px;
+        animation: glow 2s ease-in-out infinite alternate;
+      }
+
+      @keyframes glow {
+        from {
+          text-shadow:
+            0 0 10px #ff0066,
+            0 0 20px #ff0066,
+            0 0 30px #ff0066;
+        }
+        to {
+          text-shadow:
+            0 0 15px #ff3399,
+            0 0 25px #ff3399,
+            0 0 35px #ff3399,
+            0 0 45px #ff3399;
+        }
+      }
+
+      .subtitle {
+        font-size: 1.8rem;
+        text-align: center;
+        margin-bottom: 40px;
+        color: #ffd700;
+        font-weight: 300;
+      }
+
+      .content {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 30px;
+        margin: 50px 0;
+      }
+
+      .card {
+        background: rgba(255, 255, 255, 0.1);
+        backdrop-filter: blur(10px);
+        border-radius: 15px;
+        padding: 25px;
+        width: 300px;
+        text-align: center;
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        transition: transform 0.3s ease;
+      }
+
+      .card:hover {
+        transform: translateY(-10px);
+      }
+
+      .card i {
+        font-size: 3rem;
+        color: #ffd700;
+        margin-bottom: 15px;
+      }
+
+      .card h3 {
+        font-size: 1.8rem;
+        margin-bottom: 15px;
+        color: #ffd700;
+      }
+
+      .card p {
+        font-size: 1rem;
+        line-height: 1.6;
+      }
+
+      footer {
+        text-align: center;
+        padding: 30px;
+        margin-top: 40px;
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
+        font-size: 0.9rem;
+        color: #aaa;
+      }
+
+      .firework {
+        position: absolute;
+        width: 5px;
+        height: 5px;
+        border-radius: 50%;
+        box-shadow: 0 0 10px 2px;
+        z-index: 1;
+      }
+
+      /* Responsive adjustments */
+      @media (max-width: 768px) {
+        .main-title {
+          font-size: 3.5rem;
+        }
+
+        .subtitle {
+          font-size: 1.5rem;
+        }
+
+        .content {
+          flex-direction: column;
+          align-items: center;
+        }
+      }
+
+      @media (max-width: 480px) {
+        .main-title {
+          font-size: 2.5rem;
+        }
+
+        .subtitle {
+          font-size: 1.2rem;
+        }
+
+        .card {
+          width: 100%;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Fireworks container -->
+    <div id="fireworks-container"></div>
+
+    <div class="container">
+      <header>
+        <div class="logo">
+          <i class="fas fa-fire"></i> 2026 <i class="fas fa-fire"></i>
+        </div>
+        <h1 class="main-title">HAPPY NEW YEAR!</h1>
+        <p class="subtitle">A New Year of Possibilities and Adventures</p>
+      </header>
+
+      <div class="content">
+        <div class="card">
+          <i class="fas fa-star"></i>
+          <h3>New Beginnings</h3>
+          <p>
+            2026 brings fresh opportunities to grow, learn, and achieve your
+            dreams. Embrace the journey ahead with optimism and courage.
+          </p>
+        </div>
+
+        <div class="card">
+          <i class="fas fa-rocket"></i>
+          <h3>Future Innovations</h3>
+          <p>
+            Experience the technological marvels of 2026 with AI, space
+            exploration, and sustainable energy transforming our world.
+          </p>
+        </div>
+
+        <div class="card">
+          <i class="fas fa-heart"></i>
+          <h3>Global Unity</h3>
+          <p>
+            Let's work together to create a more connected, compassionate, and
+            peaceful world for all in 2026 and beyond.
+          </p>
+        </div>
+      </div>
+
+      <footer>
+        <p>
+          Made with <i class="fas fa-heart" style="color: #ff0066"></i> to
+          welcome 2026 | Celebrate responsibly
+        </p>
+        <p>© 2026 New Year's Celebration | All years welcome!</p>
+      </footer>
+    </div>
+
+    <script>
+      // Fireworks animation
+      document.addEventListener("DOMContentLoaded", function () {
+        const container = document.getElementById("fireworks-container");
+        const colors = [
+          "#ff0066",
+          "#ffd700",
+          "#00ffff",
+          "#ff3399",
+          "#00ff00",
+          "#ff9900",
+        ];
+
+        function createFirework() {
+          const firework = document.createElement("div");
+          firework.className = "firework";
+
+          // Random position
+          const posX = Math.random() * window.innerWidth;
+          const posY = Math.random() * window.innerHeight;
+
+          // Random color
+          const color = colors[Math.floor(Math.random() * colors.length)];
+
+          // Set firework properties
+          firework.style.left = `${posX}px`;
+          firework.style.top = `${posY}px`;
+          firework.style.backgroundColor = color;
+          firework.style.boxShadow = `0 0 10px 2px ${color}`;
+
+          container.appendChild(firework);
+
+          // Create explosion particles
+          createExplosion(posX, posY, color);
+
+          // Remove firework after animation
+          setTimeout(() => {
+            firework.remove();
+          }, 1000);
+        }
+
+        function createExplosion(x, y, color) {
+          const particleCount = 50 + Math.floor(Math.random() * 30);
+
+          for (let i = 0; i < particleCount; i++) {
+            const particle = document.createElement("div");
+            particle.className = "firework";
+
+            // Random direction and distance
+            const angle = Math.random() * Math.PI * 2;
+            const distance = 50 + Math.random() * 150;
+            const duration = 800 + Math.random() * 700;
+
+            // Calculate final position
+            const endX = x + Math.cos(angle) * distance;
+            const endY = y + Math.sin(angle) * distance;
+
+            // Set particle properties
+            particle.style.left = `${x}px`;
+            particle.style.top = `${y}px`;
+            particle.style.backgroundColor = color;
+            particle.style.boxShadow = `0 0 8px 1px ${color}`;
+            particle.style.width = "3px";
+            particle.style.height = "3px";
+
+            container.appendChild(particle);
+
+            // Animate particle
+            particle.animate(
+              [
+                { transform: "translate(0, 0)", opacity: 1 },
+                {
+                  transform: `translate(${endX - x}px, ${endY - y}px)`,
+                  opacity: 0,
+                },
+              ],
+              {
+                duration: duration,
+                easing: "cubic-bezier(0.1, 0.8, 0.9, 0.1)",
+              },
+            );
+
+            // Remove particle after animation
+            setTimeout(() => {
+              if (particle.parentNode) {
+                particle.remove();
+              }
+            }, duration);
+          }
+        }
+
+        // Create initial fireworks
+        for (let i = 0; i < 10; i++) {
+          setTimeout(() => createFirework(), i * 300);
+        }
+
+        // Create fireworks periodically
+        setInterval(createFirework, 800);
+
+        // Create fireworks on click
+        document.addEventListener("click", function (e) {
+          createExplosion(
+            e.clientX,
+            e.clientY,
+            colors[Math.floor(Math.random() * colors.length)],
+          );
+        });
+
+        // Update year in footer
+        const yearElement = document.querySelector("footer p:nth-child(2)");
+        const currentYear = new Date().getFullYear();
+        if (currentYear > 2026) {
+          yearElement.innerHTML = `© ${currentYear} | Originally created for 2026`;
+        }
+      });
+    </script>
+  </body>
+</html>

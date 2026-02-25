@@ -1,6 +1,6 @@
 [
-   {
-     "id": 1,
+  {
+    "id": 1,
     "name": "My Campus Library",
     "description": "A web library for students made by a student",
     "longDescription": "An open-source digital library and study desk for students and faculty, providing access to academic materials and focused on empowering knowledge for every student.",
@@ -19,7 +19,14 @@
     "name": "Biuld",
     "description": "Modern desktop messaging platform for developers with real-time chat, code sharing, and collaboration features",
     "longDescription": "A production-ready desktop chat application built for developers, featuring real-time messaging, code sharing, file attachments, and advanced collaboration features. Built with React, Node.js, Socket.IO, and PostgreSQL.",
-    "tech": ["React", "TypeScript", "Node.js", "Socket.IO", "PostgreSQL", "Prisma"],
+    "tech": [
+      "React",
+      "TypeScript",
+      "Node.js",
+      "Socket.IO",
+      "PostgreSQL",
+      "Prisma"
+    ],
     "stars": 1,
     "forks": 0,
     "language": "TypeScript",
