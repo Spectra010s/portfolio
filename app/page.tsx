@@ -1,9 +1,9 @@
-"use client"
+"use client";
 
-import { useState, useEffect } from "react"
-import { useSearchParams, useRouter, usePathname } from "next/navigation"
-import Image from "next/image"
-import Footer from "@/components/Footer"
+import { useState, useEffect } from "react";
+import { useSearchParams, useRouter, usePathname } from "next/navigation";
+import Image from "next/image";
+import Footer from "@/components/Footer";
 import {
   Github,
   ExternalLink,
@@ -16,50 +16,95 @@ import {
   Users,
   Shield,
   Globe,
-} from "lucide-react"
-import { Button } from "@/components/ui/button"
-import { Card, CardContent, CardDescription, CardHeader, CardTitle, CardFooter } from "@/components/ui/card"
-import { Badge } from "@/components/ui/badge"
-import pjs from "@/data/projects.json"
+} from "lucide-react";
+import { Button } from "@/components/ui/button";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+  CardFooter,
+} from "@/components/ui/card";
+import { Badge } from "@/components/ui/badge";
+import pjs from "@/data/projects.json";
 
 export default function Home() {
-  const params = useSearchParams()
-  const router = useRouter()
-  const pathname = usePathname()
+  const params = useSearchParams();
+  const router = useRouter();
+  const pathname = usePathname();
 
-  const initialTab = params.get("tab") || "projects"
+  const initialTab = params.get("tab") || "projects";
 
-  const [tab, setTab] = useState(initialTab)
+  const [tab, setTab] = useState(initialTab);
 
   useEffect(() => {
-    router.push(`${pathname}?tab=${tab}`, { scroll: false })
-  }, [tab, router, pathname])
+    router.push(`${pathname}?tab=${tab}`, { scroll: false });
+  }, [tab, router, pathname]);
 
-  const projects = pjs
+  const projects = pjs;
 
   const scrollToPortfolio = () => {
-    const element = document.getElementById("portfolio-content")
+    const element = document.getElementById("portfolio-content");
     if (element) {
-      element.scrollIntoView({ behavior: "smooth" })
+      element.scrollIntoView({ behavior: "smooth" });
     }
-  }
+  };
   const totalstars = projects.reduce((sum, project) => sum + project.stars, 0);
-  
-  
+
   const stats = [
     { label: "Total Repositories", value: "10+", icon: Code },
     { label: "GitHub Stars", value: totalstars.toString(), icon: Star },
     { label: "Active Projects", value: "4", icon: Zap },
     { label: "Contributions", value: "277", icon: Users },
-  ]
+  ];
 
   const skills = [
-    { name: "Frontend", items: ["React", "Nextjs", "TypeScript", "HTML/CSS", "Tailwind CSS"] },
-    { name: "Languages", items: ["Typescript", "JavaScipt", "Python", "C++", "HTML", "CSS", "Nodejs", "PlpgSQL"]},
-    { name: "Backend", items: ["Node.js", "Express", "PostgreSQL", "Prisma", "Supabase", "MySQL"] },
-    { name: "Tools", items: ["Git", "Github", "Supabase", "Acode", "Firebase", "Socket.IO", "Vercel"] },
-    { name: "Web3", items: ["Blockchain", "DApps", "Smart Contracts", "Web3.js"] },
-  ]
+    {
+      name: "Frontend",
+      items: ["React", "Nextjs", "TypeScript", "HTML/CSS", "Tailwind CSS"],
+    },
+    {
+      name: "Languages",
+      items: [
+        "Typescript",
+        "JavaScipt",
+        "Python",
+        "C++",
+        "HTML",
+        "CSS",
+        "Nodejs",
+        "PlpgSQL",
+      ],
+    },
+    {
+      name: "Backend",
+      items: [
+        "Node.js",
+        "Express",
+        "PostgreSQL",
+        "Prisma",
+        "Supabase",
+        "MySQL",
+      ],
+    },
+    {
+      name: "Tools",
+      items: [
+        "Git",
+        "Github",
+        "Supabase",
+        "Acode",
+        "Firebase",
+        "Socket.IO",
+        "Vercel",
+      ],
+    },
+    {
+      name: "Web3",
+      items: ["Blockchain", "DApps", "Smart Contracts", "Web3.js"],
+    },
+  ];
 
   return (
     <>
@@ -83,12 +128,17 @@ export default function Home() {
               </div>
 
               <div>
-                <p className="text-blue-400 tracking-[0.3em] text-xs font-bold mb-2 uppercase">Hello, I'm</p>
+                <p className="text-blue-400 tracking-[0.3em] text-xs font-bold mb-2 uppercase">
+                  Hello, I'm
+                </p>
                 <h1 className="text-5xl md:text-7xl font-extrabold mb-2 bg-gradient-to-r from-blue-400 via-indigo-400 to-purple-500 bg-clip-text text-transparent">
                   Adeloye Adetayo
                 </h1>
                 <h2 className="text-2xl md:text-3xl font-bold text-gray-200">
-                  Spectra010s <span className="text-gray-500 font-normal">| Full Stack Developer</span>
+                  Spectra010s{" "}
+                  <span className="text-gray-500 font-normal">
+                    | Full Stack Developer
+                  </span>
                 </h2>
               </div>
             </div>
@@ -101,13 +151,16 @@ export default function Home() {
 
             {/* Bio */}
             <p className="text-gray-400 text-xl leading-relaxed">
-              Creative technologist exploring <span className="text-white">Web3 and hardware</span> • Mechatronist •
-              Building innovative solutions with curiosity.
+              Creative technologist exploring{" "}
+              <span className="text-white">Web3 and hardware</span> •
+              Mechatronist • Building innovative solutions with curiosity.
             </p>
 
             <div className="flex items-center gap-3 mb-10">
               <div className="h-8 w-1 bg-blue-500 rounded-full"></div>
-              <p className="text-muted-foreground text-lg italic">Hardly working TBH</p>
+              <p className="text-muted-foreground text-lg italic">
+                Hardly working TBH
+              </p>
             </div>
 
             {/* Buttons */}
@@ -128,10 +181,22 @@ export default function Home() {
 
             <div className="flex flex-wrap gap-3">
               {[
-                { name: "GitHub", icon: Github, href: "https://github.com/Spectra010s" },
-                { name: "Twitter", icon: Twitter, href: "https://x.com/spectra010s" },
+                {
+                  name: "GitHub",
+                  icon: Github,
+                  href: "https://github.com/Spectra010s",
+                },
+                {
+                  name: "Twitter",
+                  icon: Twitter,
+                  href: "https://x.com/spectra010s",
+                },
                 { name: "LinkedIn", icon: Users, href: "#" },
-                { name: "Tiktok", icon: Tiktok, href: "https://tiktok.com/Spectra010s" },
+                {
+                  name: "Tiktok",
+                  icon: Tiktok,
+                  href: "https://tiktok.com/Spectra010s",
+                },
               ].map((social) => (
                 <a
                   key={social.name}
@@ -155,8 +220,12 @@ export default function Home() {
                 >
                   <CardContent className="pt-6">
                     <stat.icon className="w-8 h-8 mx-auto mb-2 text-primary" />
-                    <div className="text-2xl font-bold text-primary">{stat.value}</div>
-                    <div className="text-sm text-muted-foreground">{stat.label}</div>
+                    <div className="text-2xl font-bold text-primary">
+                      {stat.value}
+                    </div>
+                    <div className="text-sm text-muted-foreground">
+                      {stat.label}
+                    </div>
                   </CardContent>
                 </Card>
               ))}
@@ -204,11 +273,18 @@ export default function Home() {
                             <CardTitle className="text-xl text-white group-hover:text-blue-400 transition-colors duration-300">
                               {project.name}
                             </CardTitle>
-                            <Badge variant="secondary" className="bg-blue-500/20 text-blue-300 border-blue-500/30">
+                            <Badge
+                              variant="secondary"
+                              className="bg-blue-500/20 text-blue-300 border-blue-500/30"
+                            >
                               {project.category}
                             </Badge>
                             <Badge
-                              variant={project.status === "Production" ? "default" : "outline"}
+                              variant={
+                                project.status === "Production"
+                                  ? "default"
+                                  : "outline"
+                              }
                               className={
                                 project.status === "Production"
                                   ? "bg-green-500/20 text-green-300 border-green-500/30"
@@ -275,7 +351,11 @@ export default function Home() {
                           asChild
                           className="border-white/20 hover:border-white/40 hover:bg-white/10 bg-transparent"
                         >
-                          <a href={project.github} target="_blank" rel="noopener noreferrer">
+                          <a
+                            href={project.github}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                          >
                             <Github className="w-4 h-4 mr-1" />
                             Code
                           </a>
@@ -286,7 +366,11 @@ export default function Home() {
                             asChild
                             className="bg-blue-600 hover:bg-blue-700 text-white shadow-lg shadow-blue-500/30"
                           >
-                            <a href={project.demo} target="_blank" rel="noopener noreferrer">
+                            <a
+                              href={project.demo}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                            >
                               <ExternalLink className="w-4 h-4 mr-1" />
                               Demo
                             </a>
@@ -312,7 +396,9 @@ export default function Home() {
                     className="hover:shadow-2xl hover:shadow-blue-500/20 transition-all duration-300 hover:-translate-y-1 border-white/10 bg-white/[0.02] backdrop-blur-xl hover:border-blue-500/50"
                   >
                     <CardHeader>
-                      <CardTitle className="text-lg text-white">{skillGroup.name}</CardTitle>
+                      <CardTitle className="text-lg text-white">
+                        {skillGroup.name}
+                      </CardTitle>
                     </CardHeader>
                     <CardContent>
                       <div className="space-y-2">
@@ -336,5 +422,5 @@ export default function Home() {
       </div>
       <Footer />
     </>
-  )
+  );
 }
