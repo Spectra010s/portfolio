@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Cormorant_Garamond, Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import { buildJsonLd } from "@/lib/schema";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -18,8 +19,10 @@ const cormorantGaramond = Cormorant_Garamond({
   weight: ["500", "600", "700"],
 });
 
+const jsonLd = buildJsonLd();
+
 export const metadata: Metadata = {
-  title: "Spectra010s | Adeloye Adetayo - Full Stack Developer",
+  title: "Adeloye Adetayo | Spectra010s",
   description:
     "Creative technologist exploring Web3 and hardware. Mechatronist building innovative solutions with curiosity.",
   icons: {
@@ -50,7 +53,7 @@ export const metadata: Metadata = {
     type: "website",
     locale: "en_US",
     url: "https://spectra010s.vercel.app",
-    title: "Spectra010s | Adeloye Adetayo",
+    title: "Adeloye Adetayo | Spectra010s",
     description:
       "Creative technologist exploring Web3 and hardware. Mechatronist building innovative solutions with curiosity.",
     siteName: "Spectra010s Portfolio",
@@ -66,7 +69,7 @@ export const metadata: Metadata = {
 
   twitter: {
     card: "summary_large_image",
-    title: "Spectra010s | Adeloye Adetayo",
+    title: "Adeloye Adetayo | Spectra010s",
     description:
       "Creative technologist exploring Web3 and hardware. Mechatronist building innovative solutions.",
     creator: "@spectra010s",
@@ -104,6 +107,10 @@ export default function RootLayout({
         <meta
           name="google-site-verification"
           content="Q24M4X9zoQ0B3kNG3W7ekoB2-3_2fJi8_vNH2W7dTNU"
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
       </head>
       <body

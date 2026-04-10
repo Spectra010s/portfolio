@@ -98,7 +98,7 @@ export default function Hero({ onViewWork }: { onViewWork: () => void }) {
               Adeloye <span className="bg-gradient-to-r from-zinc-100 via-zinc-300 to-zinc-500 bg-clip-text text-transparent">Adetayo</span>
             </h1>
             <p className="font-mono text-sm text-gray-400 hero-enter-delay-2">
-              Spectra010s <span className="text-gray-600">·</span> Building web, tools, and strange ideas from a phone
+              Spectra010s <span className="text-gray-600">·</span> Building software, tools, and strange ideas from a phone
             </p>
           </div>
         </div>
