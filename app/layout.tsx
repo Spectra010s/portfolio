@@ -1,4 +1,3 @@
-import type React from "react";
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
@@ -17,8 +16,15 @@ export const metadata: Metadata = {
   title: "Spectra010s | Adeloye Adetayo - Full Stack Developer",
   description:
     "Creative technologist exploring Web3 and hardware. Mechatronist building innovative solutions with curiosity.",
+  icons: {
+    icon: [
+      { url: "/favicon-16x16.png", sizes: "16x16", type: "image/png" },
+      { url: "/favicon-32x32.png", sizes: "32x32", type: "image/png" },
+    ],
+  },
   keywords: [
     "Full Stack Developer",
+    "Spectra010s",
     "Web3",
     "Mechatronics",
     "React",
@@ -44,7 +50,7 @@ export const metadata: Metadata = {
     siteName: "Spectra010s Portfolio",
     images: [
       {
-        url: "/og-image.png",
+        url: "/opengraph-image.png",
         width: 1200,
         height: 630,
         alt: "Spectra010s - Full Stack Developer Portfolio",
@@ -60,7 +66,7 @@ export const metadata: Metadata = {
     creator: "@spectra010s",
     images: [
       {
-        url: "/og-image.png",
+        url: "/opengraph-image.png",
         width: 1200,
         height: 630,
         alt: "Spectra010s - Full Stack Developer Portfolio",
