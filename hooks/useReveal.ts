@@ -2,7 +2,7 @@
 
 import { useEffect, useRef, RefObject } from "react";
 
-export function useReveal(): RefObject<HTMLDivElement> {
+export function useReveal(): RefObject<HTMLDivElement | null> {
   const ref = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -24,7 +24,7 @@ export function useReveal(): RefObject<HTMLDivElement> {
   return ref;
 }
 
-export function useStaggerReveal(): RefObject<HTMLDivElement> {
+export function useStaggerReveal(): RefObject<HTMLDivElement | null> {
   const ref = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -51,7 +51,7 @@ export function useStaggerReveal(): RefObject<HTMLDivElement> {
   return ref;
 }
 
-export function useStaggerRevealDeps(deps: unknown[]): RefObject<HTMLDivElement> {
+export function useStaggerRevealDeps(deps: unknown[]): RefObject<HTMLDivElement | null> {
   const ref = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
