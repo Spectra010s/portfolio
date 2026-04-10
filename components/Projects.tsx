@@ -3,7 +3,7 @@
 import { useState } from "react";
 import Image from "next/image";
 import { Github, ExternalLink, Globe } from "lucide-react";
-import { useReveal, useStaggerRevealDeps } from "@/hooks/useReveal";
+import { useReveal, useStaggerRevealOnChange } from "@/hooks/useReveal";
 import pjs from "@/data/projects.json";
 import { getProjectPreviewPath } from "@/lib/utils";
 
@@ -112,7 +112,7 @@ function CategorySection({ category }: { category: string }) {
   const [showAll, setShowAll] = useState(false);
   const visible = showAll ? all : all.slice(0, SHOW_DEFAULT);
   const hasMore = all.length > SHOW_DEFAULT;
-  const gridRef = useStaggerRevealDeps([showAll, all.length]);
+  const gridRef = useStaggerRevealOnChange(showAll, all.length);
 
   if (all.length === 0) return null;
 

@@ -51,7 +51,10 @@ export function useStaggerReveal(): RefObject<HTMLDivElement | null> {
   return ref;
 }
 
-export function useStaggerRevealDeps(deps: unknown[]): RefObject<HTMLDivElement | null> {
+export function useStaggerRevealOnChange(
+  showAll: boolean,
+  itemCount: number
+): RefObject<HTMLDivElement | null> {
   const ref = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -83,7 +86,7 @@ export function useStaggerRevealDeps(deps: unknown[]): RefObject<HTMLDivElement 
 
     observer.observe(container);
     return () => observer.disconnect();
-  }, deps);
+  }, [showAll, itemCount]);
 
   return ref;
 }
