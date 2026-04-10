@@ -12,20 +12,20 @@ const SHOW_DEFAULT = 4;
 const PREVIEW_PROJECTS = new Set(["Term-Invader Console"]);
 
 const categoryColors: Record<string, string> = {
-  Web: "text-sky-400 border-sky-400/30 bg-sky-400/10",
-  CLI: "text-amber-400 border-amber-400/30 bg-amber-400/10",
-  Web3: "text-violet-400 border-violet-400/30 bg-violet-400/10",
-  "Open Source": "text-emerald-400 border-emerald-400/30 bg-emerald-400/10",
-  Freelance: "text-rose-400 border-rose-400/30 bg-rose-400/10",
-  Contribution: "text-orange-400 border-orange-400/30 bg-orange-400/10",
-  Product: "text-fuchsia-400 border-fuchsia-400/30 bg-fuchsia-400/10",
+  Web: "text-zinc-300 border-white/10 bg-white/[0.03]",
+  CLI: "text-zinc-300 border-white/10 bg-white/[0.03]",
+  Web3: "text-zinc-300 border-white/10 bg-white/[0.03]",
+  "Open Source": "text-zinc-300 border-white/10 bg-white/[0.03]",
+  Freelance: "text-zinc-300 border-white/10 bg-white/[0.03]",
+  Contribution: "text-zinc-300 border-white/10 bg-white/[0.03]",
+  Product: "text-zinc-300 border-white/10 bg-white/[0.03]",
 };
 
 function SectionHeader({ category }: { category: string }) {
   const ref = useReveal();
   return (
     <div ref={ref} className="reveal flex items-center gap-3 mb-6">
-      <span className={`font-mono text-xs px-2 py-0.5 rounded-full border ${categoryColors[category] ?? "border-gray-700 bg-gray-800 text-gray-400"}`}>
+      <span className={`font-mono text-xs px-2 py-0.5 rounded-full border ${categoryColors[category] ?? "border-white/10 bg-white/[0.03] text-zinc-300"}`}>
         {category}
       </span>
       <div className="flex-1 h-px bg-white/5" />
@@ -41,11 +41,11 @@ function ProjectCard({ project, featured = false }: { project: typeof pjs[0]; fe
   const previewSrc = getProjectPreviewPath(project.name);
 
   return (
-    <div className="stagger-card reveal-scale group relative flex flex-col rounded-2xl border border-white/10 bg-white/[0.02] backdrop-blur-sm overflow-hidden card-lift">
-      <div className="absolute inset-0 bg-gradient-to-br from-sky-500/5 to-indigo-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
+    <div className="stagger-card reveal-scale group relative flex flex-col rounded-2xl border border-white/10 bg-white/[0.03] overflow-hidden card-lift">
+      <div className="absolute inset-0 bg-white/[0.02] opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
 
       {showPreview && (
-        <div className="relative w-full aspect-video overflow-hidden border-b border-white/5 bg-[#0d0d18]">
+        <div className="relative w-full aspect-video overflow-hidden border-b border-white/5 bg-[#111215]">
           {project.demo ? (
             <Image
               src={previewSrc}
@@ -63,7 +63,7 @@ function ProjectCard({ project, featured = false }: { project: typeof pjs[0]; fe
       )}
 
       <div className="flex flex-col flex-1 p-5">
-        <h3 className="text-base font-bold text-white group-hover:text-sky-300 transition-colors leading-tight mb-2">
+        <h3 className="text-base font-bold text-white group-hover:text-zinc-200 transition-colors leading-tight mb-2">
           {project.name}
         </h3>
 
@@ -93,7 +93,7 @@ function ProjectCard({ project, featured = false }: { project: typeof pjs[0]; fe
           )}
           {project.demo && (
             <a href={project.demo} target="_blank" rel="noopener noreferrer"
-              className="flex items-center gap-1.5 text-xs font-mono px-3 py-1.5 rounded-lg bg-sky-500/10 border border-sky-500/20 text-sky-400 hover:bg-sky-500/20 transition-all">
+              className="flex items-center gap-1.5 text-xs font-mono px-3 py-1.5 rounded-lg bg-white/[0.06] border border-white/10 text-zinc-200 hover:bg-white/[0.1] transition-all">
               <ExternalLink className="w-3 h-3" /> Live
             </a>
           )}
@@ -128,7 +128,7 @@ function CategorySection({ category }: { category: string }) {
         <div className="mt-6 flex justify-center">
           <button
             onClick={() => setShowAll((v) => !v)}
-            className="font-mono text-xs px-5 py-2 rounded-full border border-white/10 text-gray-500 hover:text-white hover:border-white/20 transition-all"
+            className="font-mono text-xs px-5 py-2 rounded-full border border-white/10 text-gray-500 hover:text-white hover:border-white/20 hover:bg-white/[0.03] transition-all"
           >
             {showAll ? "Show less" : `Show ${all.length - SHOW_DEFAULT} more`}
           </button>

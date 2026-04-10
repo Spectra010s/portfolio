@@ -42,7 +42,7 @@ export default function Skills() {
         {skills.map((group) => (
           <div
             key={group.name}
-            className="stagger-card reveal-scale group rounded-2xl border border-white/10 bg-white/[0.02] p-6 card-lift hover:border-white/20 hover:bg-white/[0.04]"
+            className="stagger-card reveal-scale group rounded-2xl border border-white/10 bg-white/[0.03] p-6 card-lift hover:border-white/20 hover:bg-white/[0.05]"
           >
             <h3 className="font-mono text-xs tracking-widest text-gray-500 uppercase mb-4">
               {group.name}
@@ -51,7 +51,7 @@ export default function Skills() {
               {group.items.map((skill) => (
                 <span
                   key={skill}
-                  className="text-xs px-3 py-1 rounded-full border border-white/10 text-gray-300 hover:border-sky-500/30 hover:text-sky-300 transition-colors cursor-default"
+                  className="text-xs px-3 py-1 rounded-full border border-white/10 text-gray-300 hover:border-white/20 hover:text-white transition-colors cursor-default"
                 >
                   {skill}
                 </span>
