@@ -76,12 +76,12 @@ export default function Hero({ onViewWork }: { onViewWork: () => void }) {
   return (
     <section className="relative min-h-screen flex items-center overflow-hidden">
       <canvas ref={canvasRef} className="absolute inset-0 w-full h-full pointer-events-none" />
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(56,189,248,0.16),transparent_35%),radial-gradient(circle_at_80%_20%,rgba(99,102,241,0.14),transparent_30%),linear-gradient(to_bottom,rgba(7,11,22,0.15),rgba(7,11,22,0.65))]" />
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(255,255,255,0.07),transparent_28%),linear-gradient(to_bottom,rgba(12,12,14,0.18),rgba(12,12,14,0.72))]" />
 
       <div className="relative z-10 w-full max-w-5xl mx-auto px-6 md:px-12 py-24">
         <div className="flex flex-col md:flex-row items-start gap-10 mb-10">
           <div className="relative shrink-0 hero-enter">
-            <div className="absolute -inset-1 rounded-full bg-gradient-to-br from-sky-400 to-indigo-500 opacity-40 blur-md" />
+            <div className="absolute -inset-1 rounded-full bg-white/10 opacity-80 blur-md" />
             <Image
               src="/s.jpeg"
               alt="Adeloye Adetayo"
@@ -96,7 +96,7 @@ export default function Hero({ onViewWork }: { onViewWork: () => void }) {
           <div className="flex flex-col gap-3">
             <h1 className="text-5xl md:text-7xl font-black leading-none tracking-tight text-white hero-enter-delay-2">
               Adeloye<br />
-              <span className="bg-gradient-to-r from-sky-400 via-blue-400 to-indigo-400 bg-clip-text text-transparent">
+              <span className="text-zinc-100">
                 Adetayo
               </span>
             </h1>
@@ -127,13 +127,13 @@ export default function Hero({ onViewWork }: { onViewWork: () => void }) {
         <div className="flex flex-wrap gap-3 mb-10 hero-enter-delay-4">
           <button
             onClick={onViewWork}
-            className="px-6 py-2.5 rounded-full bg-sky-500 hover:bg-sky-400 text-white text-sm font-semibold transition-all duration-200 shadow-lg shadow-sky-500/30"
+            className="px-6 py-2.5 rounded-full bg-zinc-100 hover:bg-white text-black text-sm font-semibold transition-all duration-200"
           >
             View My Work
           </button>
           <a
             href="mailto:spectra010s@gmail.com"
-            className="px-6 py-2.5 rounded-full border border-white/10 hover:border-white/20 text-gray-300 hover:text-white text-sm font-semibold transition-all duration-200 hover:bg-white/5"
+            className="px-6 py-2.5 rounded-full border border-white/10 hover:border-white/20 text-zinc-300 hover:text-white text-sm font-semibold transition-all duration-200 hover:bg-white/[0.03]"
           >
             Email Me
           </a>
@@ -150,7 +150,7 @@ export default function Hero({ onViewWork }: { onViewWork: () => void }) {
               href={s.href}
               target="_blank"
               rel="noopener noreferrer"
-              className="font-mono text-xs px-4 py-2 rounded-lg border border-white/10 text-gray-500 hover:text-white hover:border-white/20 transition-all duration-200"
+              className="font-mono text-xs px-4 py-2 rounded-lg border border-white/10 text-gray-400 hover:text-white hover:border-white/20 hover:bg-white/[0.02] transition-all duration-200"
             >
               {s.name}
             </a>
