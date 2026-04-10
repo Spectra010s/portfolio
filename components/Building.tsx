@@ -25,7 +25,7 @@ export default function Building() {
             Currently Building
           </span>
         </div>
-        <h2 className="text-3xl md:text-4xl font-black text-white leading-tight">
+        <h2 className="font-display text-3xl md:text-4xl font-semibold text-white leading-tight">
           What I&apos;m Working On
         </h2>
       </div>
