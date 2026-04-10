@@ -136,6 +136,10 @@ html {
   color: #0d0d0f;
 }
 
+.font-display {
+  font-family: var(--font-display), serif;
+}
+
 .reveal {
   opacity: 0;
   transform: translateY(24px);

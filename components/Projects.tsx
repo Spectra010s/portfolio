@@ -145,7 +145,7 @@ export default function Projects() {
     <section className="py-20 px-6 md:px-12 max-w-5xl mx-auto" id="portfolio-content">
       <div ref={headerRef} className="reveal mb-12">
         <span className="font-mono text-xs tracking-[0.2em] text-gray-500 uppercase">Projects</span>
-        <h2 className="text-3xl md:text-4xl font-black text-white mt-2 leading-tight">
+        <h2 className="font-display text-3xl md:text-4xl font-semibold text-white mt-2 leading-tight">
           Things I&apos;ve Built
         </h2>
       </div>

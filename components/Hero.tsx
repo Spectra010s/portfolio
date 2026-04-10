@@ -94,11 +94,8 @@ export default function Hero({ onViewWork }: { onViewWork: () => void }) {
           </div>
 
           <div className="flex flex-col gap-3">
-            <h1 className="text-5xl md:text-7xl font-black leading-none tracking-tight text-white hero-enter-delay-2">
-              Adeloye<br />
-              <span className="text-zinc-100">
-                Adetayo
-              </span>
+            <h1 className="font-display text-5xl md:text-7xl font-semibold leading-none tracking-tight text-zinc-300 hero-enter-delay-2">
+              Adeloye <span className="bg-gradient-to-r from-zinc-100 via-zinc-300 to-zinc-500 bg-clip-text text-transparent">Adetayo</span>
             </h1>
             <p className="font-mono text-sm text-gray-400 hero-enter-delay-2">
               Spectra010s <span className="text-gray-600">·</span> Building web, tools, and strange ideas from a phone
