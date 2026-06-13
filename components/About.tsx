@@ -1,28 +1,38 @@
-const roles = [
+const roleGroups = [
   {
-    org: "Hiverra",
-    title: "Product direction for developer tools, utilities, and practical software",
-    type: "Building",
+    label: "Building",
+    items: [
+      {
+        org: "Hiverra",
+        title: "Product direction for developer tools, utilities, and practical software",
+      },
+    ],
   },
   {
-    org: "Flowbonds",
-    title: "Lead Developer",
-    type: "Current",
+    label: "Current",
+    items: [
+      {
+        org: "Flowbonds",
+        title: "Lead Developer",
+      },
+      {
+        org: "Fildtek",
+        title: "Chief Technology Officer",
+      },
+    ],
   },
   {
-    org: "Fildtek",
-    title: "Chief Technology Officer",
-    type: "Current",
-  },
-  {
-    org: "NAMTES FUOYE Chapter",
-    title: "Special Advisor on Publicity and Media",
-    type: "Past",
-  },
-  {
-    org: "NUESA FUOYE Chapter Press Media",
-    title: "Editor-in-Chief",
-    type: "Past",
+    label: "Past",
+    items: [
+      {
+        org: "NAMTES FUOYE Chapter",
+        title: "Special Advisor on Publicity and Media",
+      },
+      {
+        org: "NUESA FUOYE Chapter Press Media",
+        title: "Editor-in-Chief",
+      },
+    ],
   },
 ];
 
@@ -43,19 +53,27 @@ export default function About() {
           software products, from developer tools to utilities and future hardware-adjacent work.
         </p>
 
-        <div className="grid gap-3">
-          {roles.map((role) => (
+        <div className="grid gap-7 border-l border-white/10 pl-5">
+          {roleGroups.map((group) => (
             <div
-              key={`${role.org}-${role.title}`}
-              className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-1 rounded-2xl border border-white/10 bg-white/[0.03] px-5 py-4"
+              key={group.label}
+              className="relative grid gap-3 md:grid-cols-[120px_1fr] md:gap-6"
             >
-              <div>
-                <div className="text-white font-medium">{role.title}</div>
-                <div className="text-sm text-gray-400">{role.org}</div>
+              <div className="absolute -left-[25px] top-1.5 h-2.5 w-2.5 rounded-full border border-white/20 bg-background" />
+              <div className="font-mono text-[11px] uppercase tracking-[0.18em] text-gray-500">
+                {group.label}
               </div>
-              <span className="font-mono text-[11px] uppercase tracking-[0.18em] text-gray-500">
-                {role.type}
-              </span>
+              <div className="grid gap-3">
+                {group.items.map((role) => (
+                  <div
+                    key={`${group.label}-${role.org}-${role.title}`}
+                    className="grid gap-1 border-b border-white/5 pb-3 last:border-b-0 last:pb-0"
+                  >
+                    <div className="text-white font-medium">{role.title}</div>
+                    <div className="text-sm text-gray-400">{role.org}</div>
+                  </div>
+                ))}
+              </div>
             </div>
           ))}
         </div>
