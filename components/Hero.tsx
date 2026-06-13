@@ -6,7 +6,10 @@ import Image from "next/image";
 const socials = [
   { name: "GitHub", href: "https://github.com/Spectra010s" },
   { name: "X", href: "https://x.com/spectra010s" },
-  { name: "LinkedIn", href: "https://www.linkedin.com/in/adeloye-adetayo-273723253" },
+  {
+    name: "LinkedIn",
+    href: "https://www.linkedin.com/in/adeloye-adetayo-273723253",
+  },
   { name: "TikTok", href: "https://tiktok.com/@Spectra010s" },
 ];
 
@@ -26,7 +29,14 @@ export default function Hero({ onViewWork }: { onViewWork: () => void }) {
     resize();
     window.addEventListener("resize", resize);
 
-    const particles: { x: number; y: number; vx: number; vy: number; r: number; a: number }[] = [];
+    const particles: {
+      x: number;
+      y: number;
+      vx: number;
+      vy: number;
+      r: number;
+      a: number;
+    }[] = [];
     for (let i = 0; i < 60; i++) {
       particles.push({
         x: Math.random() * canvas.width,
@@ -75,7 +85,10 @@ export default function Hero({ onViewWork }: { onViewWork: () => void }) {
 
   return (
     <section className="relative min-h-screen flex items-center overflow-hidden">
-      <canvas ref={canvasRef} className="absolute inset-0 w-full h-full pointer-events-none" />
+      <canvas
+        ref={canvasRef}
+        className="absolute inset-0 w-full h-full pointer-events-none"
+      />
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(255,255,255,0.07),transparent_28%),linear-gradient(to_bottom,rgba(12,12,14,0.18),rgba(12,12,14,0.72))]" />
 
       <div className="relative z-10 w-full max-w-5xl mx-auto px-6 md:px-12 py-24">
@@ -95,10 +108,14 @@ export default function Hero({ onViewWork }: { onViewWork: () => void }) {
 
           <div className="flex flex-col gap-3">
             <h1 className="font-display text-5xl md:text-7xl font-semibold leading-none tracking-tight text-zinc-300 hero-enter-delay-2">
-              Adeloye <span className="bg-gradient-to-r from-zinc-100 via-zinc-300 to-zinc-500 bg-clip-text text-transparent">Adetayo</span>
+              Adeloye{" "}
+              <span className="bg-gradient-to-r from-zinc-100 via-zinc-300 to-zinc-500 bg-clip-text text-transparent">
+                Adetayo
+              </span>
             </h1>
             <p className="font-mono text-sm text-gray-400 hero-enter-delay-2">
-              Spectra010s <span className="text-gray-600">·</span> Building unusual, useful software and tools from a phone
+              Spectra010s <span className="text-gray-600">·</span> Building
+              unusual, useful software and tools from a phone
             </p>
           </div>
         </div>
@@ -114,10 +131,10 @@ export default function Hero({ onViewWork }: { onViewWork: () => void }) {
         </div>
 
         <p className="text-gray-200 text-lg md:text-[1.45rem] leading-relaxed max-w-3xl mb-4 hero-enter-delay-3">
-          I build software that feels
-          {" "}
-          <span className="text-white font-medium">useful, curious, and a little unconventional</span>
-          {" "}
+          I build software that feels{" "}
+          <span className="text-white font-medium">
+            useful, curious, and a little unconventional
+          </span>{" "}
           across web, Web3, and hardware-adjacent experiments.
         </p>
 
@@ -141,21 +158,20 @@ export default function Hero({ onViewWork }: { onViewWork: () => void }) {
             Around The Internet
           </p>
           <div className="flex flex-wrap gap-2">
-          {socials.map((s) => (
-            <a
-              key={s.name}
-              href={s.href}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="font-mono text-xs px-4 py-2 rounded-lg border border-white/10 text-gray-400 hover:text-white hover:border-white/20 hover:bg-white/[0.02] transition-all duration-200"
-            >
-              {s.name}
-            </a>
-          ))}
+            {socials.map((s) => (
+              <a
+                key={s.name}
+                href={s.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="font-mono text-xs px-4 py-2 rounded-lg border border-white/10 text-gray-400 hover:text-white hover:border-white/20 hover:bg-white/[0.02] transition-all duration-200"
+              >
+                {s.name}
+              </a>
+            ))}
           </div>
         </div>
       </div>
-
     </section>
   );
 }

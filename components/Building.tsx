@@ -43,14 +43,19 @@ export default function Building() {
 
             <div className="flex items-start justify-between mb-4">
               <div>
-                <span className={`font-mono text-xs px-2 py-0.5 rounded-full border ${categoryColors[project.category] ?? "text-zinc-300 border-white/10 bg-white/[0.03]"} mb-3 inline-block`}>
+                <span
+                  className={`font-mono text-xs px-2 py-0.5 rounded-full border ${categoryColors[project.category] ?? "text-zinc-300 border-white/10 bg-white/[0.03]"} mb-3 inline-block`}
+                >
                   {project.category}
                 </span>
                 <h3 className="text-xl font-bold text-white group-hover:text-zinc-200 transition-colors">
                   {project.name}
                 </h3>
               </div>
-              <ArrowUpRight className="w-4 h-4 text-gray-600 group-hover:text-white transition-colors mt-1" strokeWidth={1.5} />
+              <ArrowUpRight
+                className="w-4 h-4 text-gray-600 group-hover:text-white transition-colors mt-1"
+                strokeWidth={1.5}
+              />
             </div>
 
             <p className="text-gray-400 text-sm leading-relaxed mb-5">
@@ -59,7 +64,10 @@ export default function Building() {
 
             <div className="flex flex-wrap gap-1.5">
               {project.tech.map((t) => (
-                <span key={t} className="font-mono text-xs px-2 py-0.5 rounded border border-white/10 text-gray-500 group-hover:text-zinc-300 transition-colors">
+                <span
+                  key={t}
+                  className="font-mono text-xs px-2 py-0.5 rounded border border-white/10 text-gray-500 group-hover:text-zinc-300 transition-colors"
+                >
                   {t}
                 </span>
               ))}

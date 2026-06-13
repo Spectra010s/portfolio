@@ -12,7 +12,7 @@ function getScreenshotUrl(demoUrl: string) {
 
 export async function GET(
   _request: Request,
-  { params }: { params: Promise<{ image: string }> }
+  { params }: { params: Promise<{ image: string }> },
 ) {
   const { image } = await params;
   const fileName = path.basename(image);
@@ -40,7 +40,10 @@ export async function GET(
   });
 
   if (!screenshot.ok) {
-    return NextResponse.json({ error: "Unable to fetch preview" }, { status: 502 });
+    return NextResponse.json(
+      { error: "Unable to fetch preview" },
+      { status: 502 },
+    );
   }
 
   const body = await screenshot.arrayBuffer();

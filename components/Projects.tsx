@@ -7,7 +7,16 @@ import { useReveal, useStaggerRevealOnChange } from "@/hooks/useReveal";
 import pjs from "@/data/projects.json";
 import { getProjectPreviewPath } from "@/lib/utils";
 
-const CATEGORIES = ["Web", "CLI", "Library", "Hardware", "Web3", "Freelance", "Contribution", "Product"];
+const CATEGORIES = [
+  "Web",
+  "CLI",
+  "Library",
+  "Hardware",
+  "Web3",
+  "Freelance",
+  "Contribution",
+  "Product",
+];
 const SHOW_DEFAULT = 4;
 const PREVIEW_PROJECTS = new Set(["Term-Invader Console"]);
 type Project = (typeof pjs)[number] & { tags?: string[] };
@@ -27,7 +36,9 @@ function SectionHeader({ category }: { category: string }) {
   const ref = useReveal();
   return (
     <div ref={ref} className="reveal flex items-center gap-3 mb-6">
-      <span className={`font-mono text-xs px-2 py-0.5 rounded-full border ${categoryColors[category] ?? "border-white/10 bg-white/[0.03] text-zinc-300"}`}>
+      <span
+        className={`font-mono text-xs px-2 py-0.5 rounded-full border ${categoryColors[category] ?? "border-white/10 bg-white/[0.03] text-zinc-300"}`}
+      >
         {category}
       </span>
       <div className="flex-1 h-px bg-white/5" />
@@ -35,7 +46,13 @@ function SectionHeader({ category }: { category: string }) {
   );
 }
 
-function ProjectCard({ project, featured = false }: { project: Project; featured?: boolean }) {
+function ProjectCard({
+  project,
+  featured = false,
+}: {
+  project: Project;
+  featured?: boolean;
+}) {
   const showPreview =
     featured ||
     project.category === "Freelance" ||
@@ -76,7 +93,10 @@ function ProjectCard({ project, featured = false }: { project: Project; featured
         {project.tags && project.tags.length > 0 && (
           <div className="flex flex-wrap gap-1.5 mb-3">
             {project.tags.map((tag) => (
-              <span key={tag} className="font-mono text-[10px] uppercase tracking-[0.12em] px-2 py-0.5 rounded-full border border-white/10 text-zinc-400 bg-white/[0.03]">
+              <span
+                key={tag}
+                className="font-mono text-[10px] uppercase tracking-[0.12em] px-2 py-0.5 rounded-full border border-white/10 text-zinc-400 bg-white/[0.03]"
+              >
                 {tag}
               </span>
             ))}
@@ -85,7 +105,10 @@ function ProjectCard({ project, featured = false }: { project: Project; featured
 
         <div className="flex flex-wrap gap-1.5 mb-4">
           {project.tech.slice(0, 4).map((t) => (
-            <span key={t} className="font-mono text-[10px] px-2 py-0.5 rounded border border-white/10 text-gray-600">
+            <span
+              key={t}
+              className="font-mono text-[10px] px-2 py-0.5 rounded border border-white/10 text-gray-600"
+            >
               {t}
             </span>
           ))}
@@ -98,14 +121,22 @@ function ProjectCard({ project, featured = false }: { project: Project; featured
 
         <div className="flex gap-2">
           {project.github && (
-            <a href={project.github} target="_blank" rel="noopener noreferrer"
-              className="flex items-center gap-1.5 text-xs font-mono px-3 py-1.5 rounded-lg border border-white/10 text-gray-400 hover:text-white hover:border-white/20 transition-all">
+            <a
+              href={project.github}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-1.5 text-xs font-mono px-3 py-1.5 rounded-lg border border-white/10 text-gray-400 hover:text-white hover:border-white/20 transition-all"
+            >
               <Github className="w-3 h-3" /> Code
             </a>
           )}
           {project.demo && (
-            <a href={project.demo} target="_blank" rel="noopener noreferrer"
-              className="flex items-center gap-1.5 text-xs font-mono px-3 py-1.5 rounded-lg bg-white/[0.06] border border-white/10 text-zinc-200 hover:bg-white/[0.1] transition-all">
+            <a
+              href={project.demo}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-1.5 text-xs font-mono px-3 py-1.5 rounded-lg bg-white/[0.06] border border-white/10 text-zinc-200 hover:bg-white/[0.1] transition-all"
+            >
               <ExternalLink className="w-3 h-3" /> Live
             </a>
           )}
@@ -133,7 +164,11 @@ function CategorySection({ category }: { category: string }) {
       <SectionHeader category={category} />
       <div ref={gridRef} className="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
         {visible.map((project) => (
-          <ProjectCard key={project.name} project={project} featured={project.featured} />
+          <ProjectCard
+            key={project.name}
+            project={project}
+            featured={project.featured}
+          />
         ))}
       </div>
       {hasMore && (
@@ -154,9 +189,14 @@ export default function Projects() {
   const headerRef = useReveal();
 
   return (
-    <section className="py-20 px-6 md:px-12 max-w-5xl mx-auto" id="portfolio-content">
+    <section
+      className="py-20 px-6 md:px-12 max-w-5xl mx-auto"
+      id="portfolio-content"
+    >
       <div ref={headerRef} className="reveal mb-12">
-        <span className="font-mono text-xs tracking-[0.2em] text-gray-500 uppercase">Projects</span>
+        <span className="font-mono text-xs tracking-[0.2em] text-gray-500 uppercase">
+          Projects
+        </span>
         <h2 className="font-display text-3xl md:text-4xl font-semibold text-white mt-2 leading-tight">
           Things I&apos;ve Built
         </h2>

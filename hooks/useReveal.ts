@@ -15,7 +15,7 @@ export function useReveal(): RefObject<HTMLDivElement | null> {
           observer.unobserve(el);
         }
       },
-      { threshold: 0.08 }
+      { threshold: 0.08 },
     );
     observer.observe(el);
     return () => observer.disconnect();
@@ -42,7 +42,7 @@ export function useStaggerReveal(): RefObject<HTMLDivElement | null> {
           observer.unobserve(container);
         }
       },
-      { threshold: 0.05 }
+      { threshold: 0.05 },
     );
     observer.observe(container);
     return () => observer.disconnect();
@@ -53,7 +53,7 @@ export function useStaggerReveal(): RefObject<HTMLDivElement | null> {
 
 export function useStaggerRevealOnChange(
   showAll: boolean,
-  itemCount: number
+  itemCount: number,
 ): RefObject<HTMLDivElement | null> {
   const ref = useRef<HTMLDivElement>(null);
 
@@ -61,8 +61,12 @@ export function useStaggerRevealOnChange(
     const container = ref.current;
     if (!container) return;
 
-    const cards = Array.from(container.querySelectorAll(".stagger-card")) as HTMLElement[];
-    const unrevealed = cards.filter((card) => !card.classList.contains("revealed"));
+    const cards = Array.from(
+      container.querySelectorAll(".stagger-card"),
+    ) as HTMLElement[];
+    const unrevealed = cards.filter(
+      (card) => !card.classList.contains("revealed"),
+    );
 
     if (unrevealed.length === 0) return;
 
@@ -81,7 +85,7 @@ export function useStaggerRevealOnChange(
           observer.unobserve(container);
         }
       },
-      { threshold: 0.05 }
+      { threshold: 0.05 },
     );
 
     observer.observe(container);
