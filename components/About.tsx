@@ -4,7 +4,8 @@ const roleGroups = [
     items: [
       {
         org: "Hiverra",
-        title: "Product direction for developer tools, utilities, and practical software",
+        title:
+          "Product direction for developer tools, utilities, and practical software",
       },
     ],
   },
@@ -40,7 +41,9 @@ export default function About() {
   return (
     <section className="py-20 px-6 md:px-12 max-w-5xl mx-auto" id="about">
       <div className="mb-10">
-        <span className="font-mono text-xs tracking-[0.2em] text-gray-500 uppercase">About</span>
+        <span className="font-mono text-xs tracking-[0.2em] text-gray-500 uppercase">
+          About
+        </span>
         <h2 className="font-display text-3xl md:text-4xl font-semibold text-white mt-2 leading-tight">
           Work, roles, and context
         </h2>
@@ -48,9 +51,10 @@ export default function About() {
 
       <div className="grid gap-5">
         <p className="text-gray-300 text-base md:text-lg leading-relaxed max-w-3xl">
-          I build unusual, useful software and tools across product work, web apps,
-          and technical experiments. Hiverra is the direction I am shaping for practical
-          software products, from developer tools to utilities and future hardware-adjacent work.
+          I build unusual, useful software and tools across product work, web
+          apps, and technical experiments. Hiverra is the direction I am shaping
+          for practical software products, from developer tools to utilities and
+          future hardware-adjacent work.
         </p>
 
         <div className="grid gap-7 border-l border-white/10 pl-5">

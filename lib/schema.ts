@@ -14,7 +14,11 @@ function getProjectUrl(project: (typeof projects)[number]) {
 
 function getProjectType(project: (typeof projects)[number]) {
   if (project.category === "CLI") return "SoftwareSourceCode";
-  if (project.category === "Web" || project.category === "Freelance" || project.category === "Product") {
+  if (
+    project.category === "Web" ||
+    project.category === "Freelance" ||
+    project.category === "Product"
+  ) {
     return "WebApplication";
   }
 

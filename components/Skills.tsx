@@ -5,19 +5,55 @@ import { useReveal, useStaggerReveal } from "@/hooks/useReveal";
 const skills = [
   {
     name: "Frontend",
-    items: ["React", "Next.js", "TypeScript", "HTML/CSS", "Tailwind CSS", "Astro"],
+    items: [
+      "React",
+      "Next.js",
+      "TypeScript",
+      "HTML/CSS",
+      "Tailwind CSS",
+      "Astro",
+    ],
   },
   {
     name: "Backend",
-    items: ["Node.js", "Express", "PostgreSQL", "Prisma", "Supabase", "Better Auth", "MySQL", "FastApi"],
+    items: [
+      "Node.js",
+      "Express",
+      "PostgreSQL",
+      "Prisma",
+      "Supabase",
+      "Better Auth",
+      "MySQL",
+      "FastApi",
+    ],
   },
   {
     name: "Languages",
-    items: ["TypeScript", "JavaScript", "Python", "Rust", "C++", "PLpgSQL", "Shell", "Astro", "Go"],
+    items: [
+      "TypeScript",
+      "JavaScript",
+      "Python",
+      "Rust",
+      "C++",
+      "PLpgSQL",
+      "Shell",
+      "Astro",
+      "Go",
+    ],
   },
   {
     name: "Tools",
-    items: ["Git", "GitHub", "Supabase", "Socket.IO", "Vercel", "Railway", "Render", "Electron.js", "WebContainers"],
+    items: [
+      "Git",
+      "GitHub",
+      "Supabase",
+      "Socket.IO",
+      "Vercel",
+      "Railway",
+      "Render",
+      "Electron.js",
+      "WebContainers",
+    ],
   },
   {
     name: "Web3",
@@ -32,7 +68,9 @@ export default function Skills() {
   return (
     <section className="py-20 px-6 md:px-12 max-w-5xl mx-auto">
       <div ref={headerRef} className="reveal mb-10">
-        <span className="font-mono text-xs tracking-[0.2em] text-gray-500 uppercase">Skills</span>
+        <span className="font-mono text-xs tracking-[0.2em] text-gray-500 uppercase">
+          Skills
+        </span>
         <h2 className="font-display text-3xl md:text-4xl font-semibold text-white mt-2 leading-tight">
           What I Work With
         </h2>
