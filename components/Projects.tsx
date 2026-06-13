@@ -7,15 +7,17 @@ import { useReveal, useStaggerRevealOnChange } from "@/hooks/useReveal";
 import pjs from "@/data/projects.json";
 import { getProjectPreviewPath } from "@/lib/utils";
 
-const CATEGORIES = ["Web", "CLI", "Web3", "Open Source", "Freelance", "Contribution", "Product"];
+const CATEGORIES = ["Web", "CLI", "Library", "Hardware", "Web3", "Freelance", "Contribution", "Product"];
 const SHOW_DEFAULT = 4;
 const PREVIEW_PROJECTS = new Set(["Term-Invader Console"]);
+type Project = (typeof pjs)[number] & { tags?: string[] };
 
 const categoryColors: Record<string, string> = {
   Web: "text-zinc-300 border-white/10 bg-white/[0.03]",
   CLI: "text-zinc-300 border-white/10 bg-white/[0.03]",
+  Library: "text-zinc-300 border-white/10 bg-white/[0.03]",
+  Hardware: "text-zinc-300 border-white/10 bg-white/[0.03]",
   Web3: "text-zinc-300 border-white/10 bg-white/[0.03]",
-  "Open Source": "text-zinc-300 border-white/10 bg-white/[0.03]",
   Freelance: "text-zinc-300 border-white/10 bg-white/[0.03]",
   Contribution: "text-zinc-300 border-white/10 bg-white/[0.03]",
   Product: "text-zinc-300 border-white/10 bg-white/[0.03]",
@@ -33,7 +35,7 @@ function SectionHeader({ category }: { category: string }) {
   );
 }
 
-function ProjectCard({ project, featured = false }: { project: typeof pjs[0]; featured?: boolean }) {
+function ProjectCard({ project, featured = false }: { project: Project; featured?: boolean }) {
   const showPreview =
     featured ||
     project.category === "Freelance" ||
@@ -70,6 +72,16 @@ function ProjectCard({ project, featured = false }: { project: typeof pjs[0]; fe
         <p className="text-gray-500 text-sm leading-relaxed mb-4 flex-1">
           {project.description}
         </p>
+
+        {project.tags && project.tags.length > 0 && (
+          <div className="flex flex-wrap gap-1.5 mb-3">
+            {project.tags.map((tag) => (
+              <span key={tag} className="font-mono text-[10px] uppercase tracking-[0.12em] px-2 py-0.5 rounded-full border border-white/10 text-zinc-400 bg-white/[0.03]">
+                {tag}
+              </span>
+            ))}
+          </div>
+        )}
 
         <div className="flex flex-wrap gap-1.5 mb-4">
           {project.tech.slice(0, 4).map((t) => (
