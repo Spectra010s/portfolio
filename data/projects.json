@@ -10,12 +10,43 @@
     "building": true
   },
   {
-    "name": "Hiverra Portal",
-    "description": "A lightweight CLI tool to transfer files between devices locally or remotely.",
+    "name": "Flowbonds",
+    "description": "A marketplace platform for connecting buyers and stores seamlessly, helping people find deals, trade effortlessly, and grow their business.",
+    "category": "Product",
+    "demo": "https://www.flowbonds.com",
+    "github": null,
+    "tech": ["Vite", "React", "TypeScript", "Cloudflare Functions", "Supabase"],
+    "featured": true,
+    "building": true
+  },
+  {
+    "name": "NAMTES FUOYE Hub",
+    "description": "The official NAMTES FUOYE platform for projects, news, technical growth, innovation, and student-led impact in mechatronics engineering.",
+    "category": "Product",
+    "demo": "https://namtesfuoye.org",
+    "github": null,
+    "tech": ["Next.js", "TypeScript", "Better Auth", "Prisma", "Supabase"],
+    "featured": true,
+    "building": true
+  },
+  {
+    "name": "Fildtek",
+    "description": "A property trust and verification platform for Nigeria's real estate market.",
+    "category": "Product",
+    "demo": "https://fildtek.com",
+    "github": null,
+    "tech": ["Next.js", "TypeScript", "Hono", "PostgreSQL", "Drizzle"],
+    "featured": false,
+    "building": true
+  },
+  {
+    "name": "Portal",
+    "description": "A Hiverra file transfer CLI for simple, reliable sharing across devices, with discovery mode and direct IP transfers.",
     "category": "CLI",
     "demo": "https://portal.biuld.app",
     "github": "https://github.com/Spectra010s/portal",
     "tech": ["Rust", "Next.js", "MDX", "Nextra"],
+    "tags": ["Hiverra", "Open Source"],
     "featured": true,
     "building": true
   },
@@ -23,7 +54,7 @@
     "name": "Git-AIC",
     "description": "AI-powered Git commit generator using Google Gemini.",
     "category": "CLI",
-    "demo": "https://gitaic.vercel.app",
+    "demo": "https://gitaic.pages.dev",
     "github": "https://github.com/Spectra010s/git-aic",
     "tech": ["Astro", "TypeScript", "React"],
     "featured": true,
@@ -36,6 +67,39 @@
     "demo": null,
     "github": "https://github.com/Spectra010s/gshell",
     "tech": ["Shell"],
+    "featured": false,
+    "building": false
+  },
+  {
+    "name": "junks",
+    "description": "A lightweight Bash trash bin CLI for Linux, servers, and Termux, with restore, list, purge, and custom trash location support.",
+    "category": "CLI",
+    "demo": null,
+    "github": "https://github.com/Spectra010s/junks",
+    "tech": ["Bash", "Shell"],
+    "tags": ["Open Source"],
+    "featured": false,
+    "building": false
+  },
+  {
+    "name": "fstrace",
+    "description": "A lightweight Rust CLI for watching files and folders, with exclude rules and JSON output for scripts and tooling.",
+    "category": "CLI",
+    "demo": null,
+    "github": "https://github.com/Spectra010s/fstrace",
+    "tech": ["Rust"],
+    "tags": ["Open Source"],
+    "featured": false,
+    "building": false
+  },
+  {
+    "name": "File Char Parser",
+    "description": "A lightweight Node.js CLI that streams files and counts character frequency, with raw output for deeper inspection.",
+    "category": "CLI",
+    "demo": null,
+    "github": "https://github.com/Spectra010s/fcp",
+    "tech": ["Node.js", "JavaScript"],
+    "tags": ["Open Source"],
     "featured": false,
     "building": false
   },
@@ -82,10 +146,11 @@
   {
     "name": "makest",
     "description": "A simple TypeScript state utility using classes.",
-    "category": "Open Source",
+    "category": "Library",
     "demo": null,
     "github": "https://github.com/Spectra010s/makest",
     "tech": ["TypeScript"],
+    "tags": ["Open Source"],
     "featured": false,
     "building": false
   },
@@ -122,20 +187,22 @@
   {
     "name": "rustlrn",
     "description": "Hands-on Rust learning repo exploring errors, patterns, fixes, and best practices.",
-    "category": "Open Source",
+    "category": "Library",
     "demo": null,
     "github": "https://github.com/Spectra010s/rustlrn",
     "tech": ["Rust"],
+    "tags": ["Open Source"],
     "featured": false,
     "building": false
   },
   {
     "name": "Capstone",
     "description": "A compilation of projects that deals with hardware, software and engineering as a whole.",
-    "category": "Open Source",
+    "category": "Hardware",
     "demo": null,
     "github": "https://github.com/Spectra010s/Capstone",
     "tech": ["C++"],
+    "tags": ["Open Source"],
     "featured": false,
     "building": false
   },
@@ -161,11 +228,12 @@
   },
   {
     "name": "Biuld",
-    "description": "The Social IDE.",
+    "description": "A Hiverra product exploring collaborative developer workflows, code, chat, and control in one workspace.",
     "category": "Product",
     "demo": "https://biuld.app",
     "github": null,
     "tech": ["Electron.js", "Next.js", "Express.js", "Socket.IO", "PostgreSQL"],
+    "tags": ["Hiverra"],
     "featured": false,
     "building": true
   }

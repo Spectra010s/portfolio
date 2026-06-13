@@ -1,6 +1,6 @@
 # Spectra010s
 
-Personal portfolio site for [Adeloye Adetayo](https://spectra010s.vercel.app), built with Next.js.
+Personal portfolio site for [Adeloye Adetayo](https://spectra010s.biuld.app), built with Next.js.
 
 The site is intentionally simple: a hero section, current work, selected projects, skills, generated social preview image, and lightweight motion. Project content is driven from [`data/projects.json`](/data/data/com.termux/files/home/spectra010s/data/projects.json).
 

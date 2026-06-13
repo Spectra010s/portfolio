@@ -47,16 +47,16 @@ export const metadata: Metadata = {
     },
   ],
   creator: "Spectra010s",
-  metadataBase: new URL("https://spectra010s.vercel.app"),
+  metadataBase: new URL("https://spectra010s.biuld.app"),
 
   openGraph: {
     type: "website",
     locale: "en_US",
-    url: "https://spectra010s.vercel.app",
+    url: "https://spectra010s.biuld.app",
     title: "Adeloye Adetayo | Spectra010s",
     description:
       "Creative technologist exploring Web3 and hardware. Mechatronist building innovative solutions with curiosity.",
-    siteName: "Spectra010s Portfolio",
+    siteName: "Adeloye Adetayo",
     images: [
       {
         url: "/opengraph-image.png",
