@@ -109,6 +109,7 @@
     "category": "CLI",
     "demo": null,
     "github": "https://github.com/Spectra010s/term-invader",
+    "tags": ["Open Source"],
     "tech": ["Node.js", "JavaScript"],
     "featured": false,
     "building": false
@@ -120,6 +121,7 @@
     "demo": "https://term-invader.vercel.app",
     "github": null,
     "tech": ["Vite.js", "WebContainers", "xterm.js", "JavaScript"],
+    "tags": ["Open Source"],
     "featured": false,
     "building": false
   },
@@ -160,6 +162,7 @@
     "category": "Web3",
     "demo": "https://Spectra010s.github.io/Honeycomb-Nexus",
     "github": "https://github.com/Spectra010s/Honeycomb-Nexus",
+    "tags": ["Open Source"],
     "tech": ["HTML", "CSS", "JavaScript"],
     "featured": false,
     "building": false
@@ -212,6 +215,7 @@
     "category": "Contribution",
     "demo": "https://explainthisrepo.com",
     "github": "https://github.com/Spectra010s/ExplainThisRepo",
+    "tags": ["Open Source"],
     "tech": ["Python", "TypeScript", "Nextjs", "JavaScript"],
     "featured": false,
     "building": false
@@ -222,6 +226,7 @@
     "category": "Contribution",
     "demo": "https://zap-dun-zeta.vercel.app",
     "github": "https://github.com/Spectra010s/Zap",
+
     "tech": ["Python", "JavaScript", "CSS", "HTML"],
     "featured": false,
     "building": false
