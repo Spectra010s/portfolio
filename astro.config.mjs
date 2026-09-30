@@ -1,16 +1,15 @@
-import node from '@astrojs/node';
+import cloudflare from '@astrojs/cloudflare';
 import react from '@astrojs/react';
 import tailwind from '@tailwindcss/vite';
+import { d1, r2 } from '@emdash-cms/cloudflare';
 import { defineConfig } from 'astro/config';
-import emdash, { local } from 'emdash/astro';
-import { sqlite } from 'emdash/db';
+import emdash from 'emdash/astro';
 export default defineConfig({
- site: process.env.EMDASH_SITE_URL || 'https://spectra010s.com',
- output: 'server', adapter: node({mode:'standalone'}),
+ site: 'https://spectra010s.com',
+ output: 'server', adapter: cloudflare({imageService:'passthrough'}),
  integrations: [react(), emdash({
-  database: sqlite({url: process.env.DATABASE_URL || 'file:./data.db'}),
-  storage: local({directory: process.env.UPLOADS_DIR || './uploads', baseUrl:'/_emdash/api/media/file'}),
-  siteUrl: process.env.EMDASH_SITE_URL || 'http://localhost:4321',
+  database: d1({binding:'DB'}),
+  storage: r2({binding:'MEDIA'}),
  })],
- vite: {plugins:[tailwind()]}, devToolbar:{enabled:false},
+ vite: {plugins:[tailwind()], build:{minify:true}}, devToolbar:{enabled:false},
 });

@@ -1,0 +1,32 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "spectra-portfolio",
+  "main": "./src/worker.ts",
+  "compatibility_date": "2026-09-30",
+  "compatibility_flags": [
+    "nodejs_compat"
+  ],
+  "vars": {
+    "EMDASH_SITE_URL": "https://spectra010s.com"
+  },
+  "d1_databases": [
+    {
+      "binding": "DB",
+      "database_name": "spectra-content"
+    }
+  ],
+  "r2_buckets": [
+    {
+      "binding": "MEDIA",
+      "bucket_name": "spectra-media"
+    }
+  ],
+  "triggers": {
+    "crons": [
+      "* * * * *"
+    ]
+  },
+  "observability": {
+    "enabled": true
+  }
+}
