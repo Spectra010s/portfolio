@@ -1,7 +1,6 @@
 "use client";
 
 import { useState } from "react";
-import Image from "next/image";
 import { Github, ExternalLink, Globe } from "lucide-react";
 import { useReveal, useStaggerRevealOnChange } from "@/hooks/useReveal";
 import pjs from "@/data/projects.json";
@@ -66,7 +65,7 @@ function ProjectCard({
       {showPreview && (
         <div className="relative w-full aspect-video overflow-hidden border-b border-white/5 bg-[#111215]">
           {project.demo ? (
-            <Image
+            <img
               src={previewSrc}
               alt={`${project.name} preview`}
               width={1200}

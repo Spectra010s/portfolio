@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useRef, RefObject } from "react";
+import { useEffect, useRef, type RefObject } from "react";
 
 export function useReveal(): RefObject<HTMLDivElement | null> {
   const ref = useRef<HTMLDivElement>(null);

@@ -39,3 +39,11 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+.astro/
+dist/
+.env
+.env.*
+!.env.example
+data.db*
+uploads/

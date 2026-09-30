@@ -1,0 +1,223 @@
+{
+  "$schema": "https://emdashcms.com/seed.schema.json",
+  "version": "1",
+  "meta": {
+    "name": "Blog Starter",
+    "description": "A blog with posts and pages",
+    "author": "EmDash"
+  },
+  "settings": {
+    "title": "Spectra",
+    "tagline": "Notes on building, learning, and life."
+  },
+  "collections": [
+    {
+      "slug": "posts",
+      "label": "Posts",
+      "labelSingular": "Post",
+      "urlPattern": "/blog/{slug}",
+      "supports": [
+        "drafts",
+        "revisions",
+        "preview",
+        "scheduling",
+        "search",
+        "seo"
+      ],
+      "commentsEnabled": false,
+      "fields": [
+        {
+          "slug": "title",
+          "label": "Title",
+          "type": "string",
+          "required": true,
+          "searchable": true
+        },
+        {
+          "slug": "featured_image",
+          "label": "Featured Image",
+          "type": "image"
+        },
+        {
+          "slug": "content",
+          "label": "Content",
+          "type": "portableText",
+          "searchable": true
+        },
+        {
+          "slug": "excerpt",
+          "label": "Excerpt",
+          "type": "text"
+        }
+      ]
+    },
+    {
+      "slug": "pages",
+      "label": "Pages",
+      "labelSingular": "Page",
+      "urlPattern": "/blog/pages/{slug}",
+      "supports": [
+        "drafts",
+        "revisions",
+        "preview",
+        "search",
+        "seo"
+      ],
+      "fields": [
+        {
+          "slug": "title",
+          "label": "Title",
+          "type": "string",
+          "required": true,
+          "searchable": true
+        },
+        {
+          "slug": "content",
+          "label": "Content",
+          "type": "portableText",
+          "searchable": true
+        }
+      ],
+      "commentsEnabled": false
+    }
+  ],
+  "taxonomies": [
+    {
+      "name": "category",
+      "label": "Categories",
+      "labelSingular": "Category",
+      "hierarchical": true,
+      "collections": [
+        "posts"
+      ],
+      "terms": [
+        {
+          "slug": "development",
+          "label": "Development"
+        },
+        {
+          "slug": "design",
+          "label": "Design"
+        },
+        {
+          "slug": "notes",
+          "label": "Notes"
+        }
+      ]
+    },
+    {
+      "name": "tag",
+      "label": "Tags",
+      "labelSingular": "Tag",
+      "hierarchical": false,
+      "collections": [
+        "posts"
+      ],
+      "terms": [
+        {
+          "slug": "webdev",
+          "label": "Web Development"
+        },
+        {
+          "slug": "opinion",
+          "label": "Opinion"
+        },
+        {
+          "slug": "tools",
+          "label": "Tools"
+        },
+        {
+          "slug": "creativity",
+          "label": "Creativity"
+        }
+      ]
+    }
+  ],
+  "menus": [
+    {
+      "name": "primary",
+      "label": "Primary Navigation",
+      "items": [
+        {
+          "type": "custom",
+          "label": "Portfolio",
+          "url": "/"
+        },
+        {
+          "type": "custom",
+          "label": "Writing",
+          "url": "/blog"
+        }
+      ]
+    }
+  ],
+  "widgetAreas": [
+    {
+      "name": "sidebar",
+      "label": "Sidebar",
+      "description": "Widget area displayed on single post pages",
+      "widgets": [
+        {
+          "type": "component",
+          "componentId": "core:search",
+          "title": "Search"
+        },
+        {
+          "type": "component",
+          "componentId": "core:categories",
+          "title": "Categories"
+        },
+        {
+          "type": "component",
+          "componentId": "core:tags",
+          "title": "Tags"
+        },
+        {
+          "type": "component",
+          "componentId": "core:recent-posts",
+          "title": "Recent Posts",
+          "settings": {
+            "count": 5,
+            "showDate": true
+          }
+        },
+        {
+          "type": "component",
+          "componentId": "core:archives",
+          "title": "Archives",
+          "settings": {
+            "type": "monthly",
+            "limit": 6
+          }
+        }
+      ]
+    },
+    {
+      "name": "footer",
+      "label": "Footer",
+      "description": "Widget area displayed in the site footer",
+      "widgets": [
+        {
+          "type": "content",
+          "title": "About",
+          "content": [
+            {
+              "_type": "block",
+              "style": "normal",
+              "children": [
+                {
+                  "_type": "span",
+                  "text": "A blog about software, design, and the occasional stray thought.",
+                  "_key": "k1"
+                }
+              ],
+              "_key": "k0"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "sections": [],
+  "content": {}
+}
