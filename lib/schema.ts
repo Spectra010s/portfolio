@@ -1,6 +1,6 @@
 import projects from "@/data/projects.json";
 
-const siteUrl = "https://spectra010s.biuld.app";
+const siteUrl = "https://spectra010s.com";
 const siteName = "Adeloye Adetayo";
 const pageUrl = siteUrl;
 const personId = `${siteUrl}#person`;

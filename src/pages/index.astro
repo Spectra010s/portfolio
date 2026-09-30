@@ -1,0 +1,8 @@
+---
+import Portfolio from "../../components/Portfolio";
+import { buildJsonLd } from "../../lib/schema";
+import "../styles/portfolio.css";
+const title = "Adeloye Adetayo | Spectra010s";
+const description = "Mechatronics and software engineer building useful software and tools.";
+---
+<!doctype html><html lang="en"><head><meta charset="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/><title>{title}</title><meta name="description" content={description}/><link rel="canonical" href={Astro.site}/><meta property="og:title" content={title}/><meta property="og:description" content={description}/><meta property="og:image" content={new URL('/og.png', Astro.site).href}/><meta name="twitter:card" content="summary_large_image"/><meta name="google-site-verification" content="Q24M4X9zoQ0B3kNG3W7ekoB2-3_2fJi8_vNH2W7dTNU"/><link rel="icon" href="/favicon.ico"/><link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Geist:wght@400;500;600;700&family=Geist+Mono&display=swap" rel="stylesheet"/><script type="application/ld+json" set:html={JSON.stringify(buildJsonLd())}/></head><body class="antialiased"><nav aria-label="Main" class="absolute right-6 top-6 z-20"><a class="text-zinc-300 hover:text-white" href="/blog">Writing ↗</a></nav><Portfolio client:load /></body></html>

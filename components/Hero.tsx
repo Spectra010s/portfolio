@@ -1,7 +1,6 @@
 "use client";
 
 import { useEffect, useRef } from "react";
-import Image from "next/image";
 
 const socials = [
   { name: "GitHub", href: "https://github.com/Spectra010s" },
@@ -95,12 +94,11 @@ export default function Hero({ onViewWork }: { onViewWork: () => void }) {
         <div className="flex flex-col md:flex-row items-start gap-10 mb-10">
           <div className="relative shrink-0 hero-enter">
             <div className="absolute -inset-1 rounded-full bg-white/10 opacity-80 blur-md" />
-            <Image
+            <img
               src="/s.jpeg"
               alt="Adeloye Adetayo"
               width={128}
               height={128}
-              priority
               loading="eager"
               className="relative w-24 h-24 md:w-32 md:h-32 rounded-full object-cover border border-white/10"
             />
