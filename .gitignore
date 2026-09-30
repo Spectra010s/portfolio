@@ -47,3 +47,6 @@ dist/
 !.env.example
 data.db*
 uploads/
+
+.wrangler/
+.dev.vars
