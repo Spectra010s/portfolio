@@ -131,7 +131,8 @@ const isLoggedIn = !!Astro.locals.user;
 					}
 				</a>
 				<div class="nav-right">
-					<LiveSearch
+					<details class="nav-search"><summary aria-label="Search articles">Search</summary>
+                    <LiveSearch
 						placeholder="Search..."
 						class="site-search"
 						inputClass="site-search-input"
@@ -139,6 +140,7 @@ const isLoggedIn = !!Astro.locals.user;
 						resultClass="site-search-result"
 						collections={["posts", "pages"]}
 					/>
+                    </details>
 					<div class="nav-links">
 						{
 							menu?.items.map((item) => (
