@@ -8,6 +8,7 @@ import {
 	getSiteSettings,
 } from "emdash";
 import { Image, PortableText, WidgetArea } from "emdash/ui";
+import { Comments, CommentForm } from "emdash/ui/comments";
 import Base from "../../layouts/Base.astro";
 import PostCard from "../../components/PostCard.astro";
 import { getReadingTime } from "../../utils/reading-time";
@@ -231,9 +232,9 @@ const publishDate =
 				</div>
 
 				<div class="article-comments">
-					
-					
-				</div>
+                    <Comments collection="posts" contentId={post.id} threaded />
+                    <CommentForm collection="posts" contentId={post.id} />
+                </div>
 			</div>
 
 			{/* Right gutter: TOC + Sidebar widgets */}
