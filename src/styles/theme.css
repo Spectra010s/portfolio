@@ -86,3 +86,26 @@ html[data-blog] body, html[data-blog] main {
 }
 html[data-blog] .site-header { background: #111111; }
 html[data-blog] .site-footer { background: #181818; }
+
+/* Equal side columns keep search centered regardless of link width. */
+@media (min-width: 641px) {
+ html[data-blog] .site-header nav.nav {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 280px) minmax(0, 1fr);
+  align-items: center;
+  height: 72px;
+  gap: 24px;
+  padding-block: 0;
+ }
+ html[data-blog] .desktop-search { width: 100%; min-width: 0; }
+ html[data-blog] .desktop-search .site-search { display: block; position: relative; width: 100%; }
+ html[data-blog] .nav-right { justify-self: end; margin: 0; }
+}
+html[data-blog] .site-search-input {
+ display: block;
+ box-sizing: border-box;
+ width: 100%;
+ height: 40px;
+ margin: 0;
+ padding: 8px 12px;
+}
