@@ -12,6 +12,7 @@ export function slugify(value: string) {
     .replace(/^-+|-+$/g, "");
 }
 
-export function getProjectPreviewPath(name: string) {
+export function getProjectPreviewPath(name: string, url?: string | null) {
+  if (url) return `https://v1.screenshot.11ty.dev/${encodeURIComponent(url)}/opengraph/`;
   return `/images/${slugify(name)}.png`;
 }
