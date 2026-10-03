@@ -42,7 +42,7 @@ export default function Building() {
           >
             {project.demo && (
               <div className="relative -mx-6 -mt-6 mb-6 aspect-video overflow-hidden rounded-t-2xl border-b border-white/10">
-                <img src={getProjectPreviewPath(project.name, project.demo)}
+                <img src={getProjectPreviewPath(project.name)}
                   alt={`${project.name} preview`} width={1200} height={630}
                   loading="lazy" decoding="async"
                   className="w-full h-full object-cover"
