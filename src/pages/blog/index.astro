@@ -53,7 +53,7 @@ const formatDate = (date: Date) =>
 
 		{
 			posts.length === 0 ? (
-				<p class="empty">No posts yet.</p>
+				<div class="empty"><p>No posts yet.</p><p class="empty-detail">New writing will appear here.</p></div>
 			) : (
 				<div class="posts-list">
 					{postsWithTags.map(({ post, tags, bylines }) => (
@@ -149,9 +149,12 @@ const formatDate = (date: Date) =>
 	}
 
 	.empty {
+        display: flex; flex-direction: column; align-items: center; justify-content: center; min-height: 40vh; text-align: center; gap: .5rem;
 		color: var(--color-muted);
 		font-size: var(--font-size-lg);
 	}
+
+    .empty-detail { font-size: .875rem; }
 
 	.posts-list {
 		display: flex;
