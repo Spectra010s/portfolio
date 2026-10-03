@@ -55,7 +55,7 @@ function ProjectCard({
     featured ||
     project.category === "Freelance" ||
     PREVIEW_PROJECTS.has(project.name);
-  const previewSrc = getProjectPreviewPath(project.name);
+  const previewSrc = getProjectPreviewPath(project.name, project.demo);
 
   return (
     <div className="stagger-card reveal-scale group relative flex flex-col rounded-2xl border border-white/10 bg-white/[0.03] overflow-hidden card-lift">
@@ -67,6 +67,9 @@ function ProjectCard({
             <img
               src={previewSrc}
               alt={`${project.name} preview`}
+              loading="lazy"
+              decoding="async"
+              onError={(event) => { if (event.currentTarget.parentElement) event.currentTarget.parentElement.hidden = true; }}
               width={1200}
               height={675}
               className="w-full h-full object-contain opacity-80 group-hover:opacity-100 group-hover:scale-105 transition-all duration-500"
