@@ -18,7 +18,7 @@
   Example:
 
   :root {
-    --color-brand: light-dark(#0f766e, #2dd4bf);
+    --color-brand: light-dark(#2563eb, #60a5fa);
     --font-heading: "Iowan Old Style", Georgia, serif;
     --radius: 8px;
   }
@@ -35,8 +35,8 @@
 :root { --font-body: "Inter", sans-serif; --font-mono: "JetBrains Mono", monospace; }
 
 :root {
- --color-brand: light-dark(#0f766e, #2dd4bf);
- --color-brand-hover: light-dark(#115e59, #5eead4);
+ --color-brand: light-dark(#2563eb, #60a5fa);
+ --color-brand-hover: light-dark(#1d4ed8, #93c5fd);
  --color-muted: light-dark(#666666, #a0a0a0);
  --color-text-secondary: light-dark(#4b5563, #c0c4c8);
  --color-on-brand: light-dark(#ffffff, #09201c);
@@ -59,34 +59,34 @@
 /* Keep blog tokens distinct from the portfolio's Tailwind theme. */
 html[data-blog] {
  color-scheme: dark;
- --color-bg: #101214;
- --color-bg-subtle: #171a1d;
- --color-surface: #1b2024;
- --color-text: #f1f5f4;
- --color-text-secondary: #c0c9c7;
- --color-muted: #9caeaa;
- --color-border: #34413e;
- --color-border-subtle: #25302d;
- --color-brand: #2dd4bf;
- --color-brand-hover: #5eead4;
- --color-on-brand: #082f2a;
+ --color-bg: #111111;
+ --color-bg-subtle: #181818;
+ --color-surface: #202020;
+ --color-text: #f4f4f5;
+ --color-text-secondary: #c4c4ca;
+ --color-muted: #a1a1aa;
+ --color-border: #353535;
+ --color-border-subtle: #272727;
+ --color-brand: #60a5fa;
+ --color-brand-hover: #93c5fd;
+ --color-on-brand: #10213b;
 }
 html[data-blog].light {
  color-scheme: light;
- --color-bg: #fafcfb;
- --color-bg-subtle: #f0f5f3;
- --color-surface: #e9f0ed;
- --color-text: #17221f;
- --color-text-secondary: #40534c;
- --color-muted: #52665d;
- --color-border: #c6d5ce;
- --color-border-subtle: #dde6e1;
- --color-brand: #0f766e;
- --color-brand-hover: #115e59;
+ --color-bg: #fafafa;
+ --color-bg-subtle: #f2f2f2;
+ --color-surface: #eaeaea;
+ --color-text: #18181b;
+ --color-text-secondary: #45454c;
+ --color-muted: #62626b;
+ --color-border: #d0d0d0;
+ --color-border-subtle: #e4e4e4;
+ --color-brand: #2563eb;
+ --color-brand-hover: #1d4ed8;
  --color-on-brand: #ffffff;
 }
 html[data-blog] .nav-search summary { color: var(--color-brand); list-style: none; }
 html[data-blog] .nav-search summary::-webkit-details-marker { display: none; }
-html[data-blog] .nav-search summary::before { content: '⌕'; margin-right: .35rem; }
+html[data-blog] .nav-search summary { display: flex; align-items: center; justify-content: center; width: 40px; height: 40px; border: 1px solid var(--color-border); border-radius: 8px; }
 html[data-blog] .nav-links a[aria-current="page"] { color: var(--color-brand); }
 html[data-blog] .page-header h1 { color: var(--color-brand); }
