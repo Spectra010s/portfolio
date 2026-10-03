@@ -139,13 +139,13 @@ export default function Hero({ onViewWork }: { onViewWork: () => void }) {
         <div className="flex flex-wrap gap-3 mb-10 hero-enter-delay-4">
           <button
             onClick={onViewWork}
-            className="px-6 py-2.5 rounded-full bg-zinc-100 hover:bg-white text-black text-sm font-semibold transition-all duration-200"
+            className="px-6 py-2.5 rounded-full bg-primary hover:bg-blue-300 text-primary-foreground text-sm font-semibold transition-all duration-200"
           >
             View My Work
           </button>
           <a
             href="mailto:spectra010s@gmail.com"
-            className="px-6 py-2.5 rounded-full border border-white/10 hover:border-white/20 text-zinc-300 hover:text-white text-sm font-semibold transition-all duration-200 hover:bg-white/[0.03]"
+            className="px-6 py-2.5 rounded-full border border-white/10 hover:border-primary/50 text-zinc-300 hover:text-primary text-sm font-semibold transition-all duration-200 hover:bg-white/[0.03]"
           >
             Email Me
           </a>
@@ -162,7 +162,7 @@ export default function Hero({ onViewWork }: { onViewWork: () => void }) {
                 href={s.href}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="font-mono text-xs px-4 py-2 rounded-lg border border-white/10 text-gray-400 hover:text-white hover:border-white/20 hover:bg-white/[0.02] transition-all duration-200"
+                className="font-mono text-xs px-4 py-2 rounded-lg border border-white/10 text-gray-400 hover:text-primary hover:border-primary/50 hover:bg-white/[0.02] transition-all duration-200"
               >
                 {s.name}
               </a>
