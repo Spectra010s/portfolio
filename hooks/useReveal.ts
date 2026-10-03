@@ -2,52 +2,53 @@
 
 import { useEffect, useRef, type RefObject } from "react";
 
+// Content is visible before hydration. Observe each item separately so a
+// large grid never has to enter the viewport before its first card appears.
+function observeReveals(elements: HTMLElement[]): () => void {
+  if (
+    typeof IntersectionObserver === "undefined" ||
+    window.matchMedia("(prefers-reduced-motion: reduce)").matches
+  ) return () => {};
+
+  const observer = new IntersectionObserver((entries) => {
+    for (const entry of entries) {
+      if (!entry.isIntersecting) continue;
+      const el = entry.target as HTMLElement;
+      // Do not replay an entrance on content already visible at hydration.
+      if (el.dataset.revealPending === "true") el.classList.add("revealed");
+      delete el.dataset.revealPending;
+      observer.unobserve(el);
+    }
+  }, { threshold: 0 });
+
+  for (const el of elements) {
+    const rect = el.getBoundingClientRect();
+    if (rect.top < window.innerHeight) continue;
+    el.dataset.revealPending = "true";
+    observer.observe(el);
+  }
+
+  return () => {
+    observer.disconnect();
+    for (const el of elements) delete el.dataset.revealPending;
+  };
+}
+
 export function useReveal(): RefObject<HTMLDivElement | null> {
   const ref = useRef<HTMLDivElement>(null);
-
   useEffect(() => {
-    const el = ref.current;
-    if (!el) return;
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          el.classList.add("revealed");
-          observer.unobserve(el);
-        }
-      },
-      { threshold: 0.08 },
-    );
-    observer.observe(el);
-    return () => observer.disconnect();
+    return ref.current ? observeReveals([ref.current]) : undefined;
   }, []);
-
   return ref;
 }
 
 export function useStaggerReveal(): RefObject<HTMLDivElement | null> {
   const ref = useRef<HTMLDivElement>(null);
-
   useEffect(() => {
-    const container = ref.current;
-    if (!container) return;
-    const cards = Array.from(container.querySelectorAll(".stagger-card"));
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          cards.forEach((card, i) => {
-            setTimeout(() => {
-              (card as HTMLElement).classList.add("revealed");
-            }, i * 90);
-          });
-          observer.unobserve(container);
-        }
-      },
-      { threshold: 0.05 },
-    );
-    observer.observe(container);
-    return () => observer.disconnect();
+    return ref.current
+      ? observeReveals(Array.from(ref.current.querySelectorAll<HTMLElement>(".stagger-card")))
+      : undefined;
   }, []);
-
   return ref;
 }
 
@@ -56,41 +57,10 @@ export function useStaggerRevealOnChange(
   itemCount: number,
 ): RefObject<HTMLDivElement | null> {
   const ref = useRef<HTMLDivElement>(null);
-
   useEffect(() => {
-    const container = ref.current;
-    if (!container) return;
-
-    const cards = Array.from(
-      container.querySelectorAll(".stagger-card"),
-    ) as HTMLElement[];
-    const unrevealed = cards.filter(
-      (card) => !card.classList.contains("revealed"),
-    );
-
-    if (unrevealed.length === 0) return;
-
-    const revealCards = () => {
-      unrevealed.forEach((card, i) => {
-        setTimeout(() => {
-          card.classList.add("revealed");
-        }, i * 90);
-      });
-    };
-
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          revealCards();
-          observer.unobserve(container);
-        }
-      },
-      { threshold: 0.05 },
-    );
-
-    observer.observe(container);
-    return () => observer.disconnect();
+    return ref.current
+      ? observeReveals(Array.from(ref.current.querySelectorAll<HTMLElement>(".stagger-card:not(.revealed)")))
+      : undefined;
   }, [showAll, itemCount]);
-
   return ref;
 }
