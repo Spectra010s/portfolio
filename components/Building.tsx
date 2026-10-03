@@ -3,6 +3,7 @@
 import { ArrowUpRight } from "lucide-react";
 import { useReveal, useStaggerReveal } from "@/hooks/useReveal";
 import pjs from "@/data/projects.json";
+import { getProjectPreviewPath } from "@/lib/utils";
 
 const buildingProjects = pjs.filter((p) => p.building).slice(0, 3);
 
@@ -39,6 +40,16 @@ export default function Building() {
             rel="noopener noreferrer"
             className="stagger-card reveal-scale group relative block rounded-2xl border border-white/10 bg-white/[0.03] p-6 card-lift hover:border-white/20"
           >
+            {project.demo && (
+              <div className="relative -mx-6 -mt-6 mb-6 aspect-video overflow-hidden rounded-t-2xl border-b border-white/10">
+                <img src={getProjectPreviewPath(project.name, project.demo)}
+                  alt={`${project.name} preview`} width={1200} height={630}
+                  loading="lazy" decoding="async"
+                  className="w-full h-full object-cover"
+                  onError={(event) => { if (event.currentTarget.parentElement) event.currentTarget.parentElement.hidden = true; }}
+                />
+              </div>
+            )}
             <div className="absolute inset-0 rounded-2xl bg-white/[0.02] opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
 
             <div className="flex items-start justify-between mb-4">
