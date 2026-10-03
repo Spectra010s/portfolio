@@ -16,7 +16,6 @@ const CATEGORIES = [
   "Contribution",
   "Product",
 ];
-const SHOW_DEFAULT = 4;
 const PREVIEW_PROJECTS = new Set(["Term-Invader Console"]);
 type Project = (typeof pjs)[number] & { tags?: string[] };
 
@@ -151,10 +150,7 @@ function CategorySection({ category }: { category: string }) {
   const rest = projects.filter((p) => !p.featured);
   const all = [...featured, ...rest];
 
-  const [showAll, setShowAll] = useState(false);
-  const visible = showAll ? all : all.slice(0, SHOW_DEFAULT);
-  const hasMore = all.length > SHOW_DEFAULT;
-  const gridRef = useStaggerRevealOnChange(showAll, all.length);
+  const gridRef = useStaggerRevealOnChange(true, all.length);
 
   if (all.length === 0) return null;
 
@@ -162,7 +158,7 @@ function CategorySection({ category }: { category: string }) {
     <div className="mb-16">
       <SectionHeader category={category} />
       <div ref={gridRef} className="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
-        {visible.map((project) => (
+        {all.map((project) => (
           <ProjectCard
             key={project.name}
             project={project}
@@ -170,22 +166,15 @@ function CategorySection({ category }: { category: string }) {
           />
         ))}
       </div>
-      {hasMore && (
-        <div className="mt-6 flex justify-center">
-          <button
-            onClick={() => setShowAll((v) => !v)}
-            className="font-mono text-xs px-5 py-2 rounded-full border border-white/10 text-gray-500 hover:text-primary hover:border-primary/50 hover:bg-white/[0.03] transition-all"
-          >
-            {showAll ? "Show less" : `Show ${all.length - SHOW_DEFAULT} more`}
-          </button>
-        </div>
-      )}
+
     </div>
   );
 }
 
 export default function Projects() {
   const headerRef = useReveal();
+  const [category, setCategory] = useState("All");
+  const availableCategories = CATEGORIES.filter((cat) => pjs.some((p) => p.category === cat));
 
   return (
     <section
@@ -196,12 +185,20 @@ export default function Projects() {
         <span className="font-mono text-xs tracking-[0.2em] text-gray-500 uppercase">
           Projects
         </span>
-        <h2 className="font-display text-3xl md:text-4xl font-semibold text-white mt-2 leading-tight">
+        <h1 className="font-display text-3xl md:text-4xl font-semibold text-white mt-2 leading-tight">
           Things I&apos;ve Built
-        </h2>
+        </h1>
       </div>
 
-      {CATEGORIES.map((cat) => (
+      <div className="flex flex-wrap gap-2 mb-10" role="group" aria-label="Filter projects by category">
+        {["All", ...availableCategories].map((cat) => (
+          <button key={cat} type="button" aria-pressed={category === cat} onClick={() => setCategory(cat)}
+            className={`px-3 py-2 rounded-full border text-sm transition-colors ${category === cat ? "border-primary/50 bg-primary/10 text-primary" : "border-white/10 text-zinc-300 hover:border-primary/50 hover:text-primary"}`}>
+            {cat}
+          </button>
+        ))}
+      </div>
+      {availableCategories.filter((cat) => category === "All" || cat === category).map((cat) => (
         <CategorySection key={cat} category={cat} />
       ))}
     </section>
