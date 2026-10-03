@@ -39,7 +39,7 @@
  --color-brand-hover: light-dark(#1d4ed8, #93c5fd);
  --color-muted: light-dark(#666666, #a0a0a0);
  --color-text-secondary: light-dark(#4b5563, #c0c4c8);
- --color-on-brand: light-dark(#ffffff, #09201c);
+ --color-on-brand: light-dark(#ffffff, #10213b);
 }
 .nav-search { position: relative; }
 .nav-search summary { cursor: pointer; color: var(--color-brand); font-size: .875rem; }
@@ -90,3 +90,20 @@ html[data-blog] .nav-search summary::-webkit-details-marker { display: none; }
 html[data-blog] .nav-search summary { display: flex; align-items: center; justify-content: center; width: 40px; height: 40px; border: 1px solid var(--color-border); border-radius: 8px; }
 html[data-blog] .nav-links a[aria-current="page"] { color: var(--color-brand); }
 html[data-blog] .page-header h1 { color: var(--color-brand); }
+
+@media (prefers-color-scheme: light) {
+html[data-blog]:not(.light):not(.dark) {
+ color-scheme: light;
+ --color-bg: #fafafa;
+ --color-bg-subtle: #f2f2f2;
+ --color-surface: #eaeaea;
+ --color-text: #18181b;
+ --color-text-secondary: #45454c;
+ --color-muted: #62626b;
+ --color-border: #d0d0d0;
+ --color-border-subtle: #e4e4e4;
+ --color-brand: #2563eb;
+ --color-brand-hover: #1d4ed8;
+ --color-on-brand: #ffffff;
+}
+}
