@@ -4,7 +4,7 @@ import { ArrowUpRight } from "lucide-react";
 import { useReveal, useStaggerReveal } from "@/hooks/useReveal";
 import pjs from "@/data/projects.json";
 
-const buildingProjects = pjs.filter((p) => p.building);
+const buildingProjects = pjs.filter((p) => p.building).slice(0, 3);
 
 const categoryColors: Record<string, string> = {
   Web: "text-zinc-300 border-white/10 bg-white/[0.03]",
@@ -74,6 +74,11 @@ export default function Building() {
             </div>
           </a>
         ))}
+      </div>
+      <div className="mt-8">
+        <a href="/projects" className="inline-flex items-center gap-2 text-primary hover:text-blue-300 transition-colors">
+          View all projects <ArrowUpRight className="w-4 h-4" aria-hidden="true" />
+        </a>
       </div>
     </section>
   );
