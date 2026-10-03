@@ -55,7 +55,7 @@ function ProjectCard({
     featured ||
     project.category === "Freelance" ||
     PREVIEW_PROJECTS.has(project.name);
-  const previewSrc = getProjectPreviewPath(project.name, project.demo);
+  const previewSrc = getProjectPreviewPath(project.name);
 
   return (
     <div className="stagger-card reveal-scale group relative flex flex-col rounded-2xl border border-white/10 bg-white/[0.03] overflow-hidden card-lift">
