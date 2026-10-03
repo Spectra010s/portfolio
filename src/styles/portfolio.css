@@ -149,11 +149,16 @@ html {
   opacity: 1;
   transform: none;
 }
+/* Only arm offscreen items once their observer is running. */
+.reveal-ready {
+  opacity: 0;
+  transform: translateY(18px);
+}
 .reveal.revealed, .reveal-left.revealed, .reveal-scale.revealed {
-  animation: contentReveal 240ms ease-out both;
+  animation: contentReveal 520ms cubic-bezier(0.22, 1, 0.36, 1) both;
 }
 @keyframes contentReveal {
-  from { opacity: .85; transform: translateY(8px); }
+  from { opacity: 0; transform: translateY(18px); }
   to { opacity: 1; transform: none; }
 }
 
@@ -223,7 +228,7 @@ html {
 
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
-  .reveal, .reveal-left, .reveal-scale, [class*="hero-enter"], .pulse-dot {
+  .reveal, .reveal-left, .reveal-scale, .reveal-ready, [class*="hero-enter"], .pulse-dot {
     animation: none;
     transition: none;
     opacity: 1;
