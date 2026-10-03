@@ -81,7 +81,7 @@ function ProjectCard({
       )}
 
       <div className="flex flex-col flex-1 p-5">
-        <h3 className="text-base font-bold text-white group-hover:text-zinc-200 transition-colors leading-tight mb-2">
+        <h3 className="text-base font-bold text-white group-hover:text-primary transition-colors leading-tight mb-2">
           {project.name}
         </h3>
 
@@ -124,7 +124,7 @@ function ProjectCard({
               href={project.github}
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center gap-1.5 text-xs font-mono px-3 py-1.5 rounded-lg border border-white/10 text-gray-400 hover:text-white hover:border-white/20 transition-all"
+              className="flex items-center gap-1.5 text-xs font-mono px-3 py-1.5 rounded-lg border border-white/10 text-gray-400 hover:text-primary hover:border-primary/50 transition-all"
             >
               <Github className="w-3 h-3" /> Code
             </a>
@@ -134,7 +134,7 @@ function ProjectCard({
               href={project.demo}
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center gap-1.5 text-xs font-mono px-3 py-1.5 rounded-lg bg-white/[0.06] border border-white/10 text-zinc-200 hover:bg-white/[0.1] transition-all"
+              className="flex items-center gap-1.5 text-xs font-mono px-3 py-1.5 rounded-lg bg-primary/10 border border-primary/30 text-primary hover:bg-primary/20 transition-all"
             >
               <ExternalLink className="w-3 h-3" /> Live
             </a>
@@ -174,7 +174,7 @@ function CategorySection({ category }: { category: string }) {
         <div className="mt-6 flex justify-center">
           <button
             onClick={() => setShowAll((v) => !v)}
-            className="font-mono text-xs px-5 py-2 rounded-full border border-white/10 text-gray-500 hover:text-white hover:border-white/20 hover:bg-white/[0.03] transition-all"
+            className="font-mono text-xs px-5 py-2 rounded-full border border-white/10 text-gray-500 hover:text-primary hover:border-primary/50 hover:bg-white/[0.03] transition-all"
           >
             {showAll ? "Show less" : `Show ${all.length - SHOW_DEFAULT} more`}
           </button>
