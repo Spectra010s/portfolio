@@ -14,23 +14,23 @@ function observeReveals(elements: HTMLElement[]): () => void {
     for (const entry of entries) {
       if (!entry.isIntersecting) continue;
       const el = entry.target as HTMLElement;
-      // Do not replay an entrance on content already visible at hydration.
-      if (el.dataset.revealPending === "true") el.classList.add("revealed");
-      delete el.dataset.revealPending;
+      // Reveal before the item reaches the viewport, without React state updates.
+      el.classList.add("revealed");
+      el.classList.remove("reveal-ready");
       observer.unobserve(el);
     }
-  }, { threshold: 0 });
+  }, { threshold: 0, rootMargin: "0px 0px 48px 0px" });
 
   for (const el of elements) {
     const rect = el.getBoundingClientRect();
     if (rect.top < window.innerHeight) continue;
-    el.dataset.revealPending = "true";
+    el.classList.add("reveal-ready");
     observer.observe(el);
   }
 
   return () => {
     observer.disconnect();
-    for (const el of elements) delete el.dataset.revealPending;
+    for (const el of elements) el.classList.remove("reveal-ready");
   };
 }
 
