@@ -52,7 +52,7 @@ if (Astro.cache?.enabled) {
 	Astro.cache.set(menuResult.cacheHint);
 }
 
-const { siteTitle, siteTagline, siteLogo } = resolveBlogSiteIdentity(
+const { siteTitle, siteTagline } = resolveBlogSiteIdentity(
 	settingsResult.data,
 );
 const titleIncludesSiteName =
@@ -116,28 +116,16 @@ const isLoggedIn = !!Astro.locals.user;
 	<body>
 		<EmDashBodyStart page={pageCtx} />
 		<header class="site-header">
-			<nav class="nav">
-                <a href="/blog" class="site-title">{siteTitle}</a>
-				<div class="nav-right">
-					<details class="nav-search"><summary aria-label="Search articles" title="Search articles"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5" /><path d="m16 16 4.5 4.5" /></svg></summary>
-                    <LiveSearch
-						placeholder="Search..."
-						class="site-search"
-						inputClass="site-search-input"
-						resultsClass="site-search-results"
-						resultClass="site-search-result"
-						collections={["posts", "pages"]}
-					/>
-                    </details>
+			<nav class="nav" aria-label="Blog navigation">
+                <a href="/blog" class="site-title" aria-label="Spectra writing"><img src="/s.jpeg" alt="" class="blog-avatar" width="36" height="36" /></a>
+                <div class="desktop-search"><LiveSearch placeholder="Search articles…" class="site-search" inputClass="site-search-input" resultsClass="site-search-results" resultClass="site-search-result" collections={["posts", "pages"]} routeMap={{ posts: "/blog/:path" }} /></div>
+                <div class="nav-right">
                     <div class="nav-links"><a href="/">Portfolio ↗</a></div>
-				</div>
-				{
-					isLoggedIn && (
-						<a href="/_emdash/admin" class="nav-admin">
-							Admin
-						</a>
-					)
-				}
+                    <details class="nav-search mobile-search">
+                        <summary aria-label="Search articles" title="Search articles"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5" /><path d="m16 16 4.5 4.5" /></svg></summary>
+                        <LiveSearch placeholder="Search articles…" class="site-search" inputClass="site-search-input" resultsClass="site-search-results" resultClass="site-search-result" collections={["posts", "pages"]} routeMap={{ posts: "/blog/:path" }} />
+                    </details>
+                </div>
 			</nav>
 		</header>
 
@@ -149,20 +137,9 @@ const isLoggedIn = !!Astro.locals.user;
 			<div class="footer-inner">
 				<div class="footer-grid">
 					<div class="footer-brand">
-						<a href="/" class="footer-logo">
-							{
-								siteLogo ? (
-									<img
-										src={siteLogo.url}
-										alt={siteLogo.alt || siteTitle}
-										class="footer-logo-img"
-									/>
-								) : (
-									siteTitle
-								)
-							}
-						</a>
-						<p class="footer-tagline">{siteTagline}</p>
+                        <a href="/" class="footer-logo">Spectra</a>
+                        <p class="footer-name">Adeloye Adetayo</p>
+                        <p class="footer-tagline">{siteTagline}</p>
 					</div>
 					<div class="footer-nav">
 						<h2 class="footer-heading">Navigate</h2>
@@ -190,6 +167,7 @@ const isLoggedIn = !!Astro.locals.user;
 						<h2 class="footer-heading">Connect</h2>
 						<ul class="footer-links">
 							<li><a href="/blog/rss.xml">RSS Feed</a></li>
+                            {isLoggedIn && <li><a href="/_emdash/admin">Admin</a></li>}
 						</ul>
 					</div>
 					<div class="footer-widgets-section">
@@ -198,7 +176,7 @@ const isLoggedIn = !!Astro.locals.user;
 				</div>
 				<div class="footer-bottom">
 					<p class="footer-copyright">
-						Powered by <a href="https://emdashcms.com">EmDash</a>
+						© {new Date().getFullYear()} Adeloye Adetayo
 					</p>
 					<div class="theme-switcher">
 						<button
@@ -828,9 +806,12 @@ const isLoggedIn = !!Astro.locals.user;
 			document.addEventListener("keydown", (e) => {
 				if ((e.metaKey || e.ctrlKey) && e.key === "k") {
 					e.preventDefault();
-					const searchInput = document.querySelector(
-						".site-search-input",
-					) as HTMLInputElement;
+					const mobile = window.matchMedia("(max-width: 640px)").matches;
+                    const details = document.querySelector<HTMLDetailsElement>(".mobile-search");
+                    if (mobile && details) details.open = true;
+                    const searchInput = document.querySelector<HTMLInputElement>(
+                        mobile ? ".mobile-search .site-search-input" : ".desktop-search .site-search-input"
+                    );
 					if (searchInput) {
 						searchInput.focus();
 					}
@@ -839,4 +820,21 @@ const isLoggedIn = !!Astro.locals.user;
 		</script>
 		<EmDashBodyEnd page={pageCtx} />
 	</body>
+<style>
+.nav { display: grid; grid-template-columns: 1fr minmax(180px, 360px) 1fr; gap: 24px; }
+.nav-right { justify-self: end; margin: 0; }
+.site-title { justify-self: start; display: flex; }
+.desktop-search { min-width: 0; }
+.desktop-search :global(.site-search), .desktop-search :global(.site-search-input) { width: 100%; }
+.mobile-search { display: none; }
+.footer-name { margin: .5rem 0; color: var(--color-text-secondary); }
+.footer-bottom { justify-content: center; flex-wrap: wrap; gap: 20px; text-align: center; }
+@media (max-width: 640px) {
+    .nav { display: flex; justify-content: space-between; gap: 12px; }
+    .desktop-search { display: none; }
+    .mobile-search { display: block; }
+    .nav-right { margin-left: auto; gap: 12px; }
+    .mobile-search :global(.site-search-input) { width: 100%; }
+}
+</style>
 </html>
