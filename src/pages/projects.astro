@@ -1,0 +1,35 @@
+---
+import Projects from "../../components/Projects";
+import Footer from "../../components/Footer";
+import "../styles/portfolio.css";
+const title = "Projects | Adeloye Adetayo";
+const description = "Software, developer tools, products, and technical experiments by Adeloye Adetayo.";
+const canonical = new URL("/projects", Astro.site);
+---
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <link rel="canonical" href={canonical} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={canonical} />
+    <meta property="og:image" content={new URL("/og.png", Astro.site)} />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link rel="icon" href="/favicon.ico" />
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Geist:wght@400;500;600;700&family=Geist+Mono&display=swap" rel="stylesheet" />
+  </head>
+  <body class="antialiased">
+    <header class="border-b border-white/10">
+      <nav aria-label="Main" class="max-w-5xl mx-auto px-6 md:px-12 h-16 flex items-center justify-between">
+        <a href="/" class="text-white hover:text-zinc-300">← Portfolio</a>
+        <a href="/blog" class="text-white hover:text-zinc-300">Writing ↗</a>
+      </nav>
+    </header>
+    <main><Projects client:load /></main>
+    <Footer />
+  </body>
+</html>
