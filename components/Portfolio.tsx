@@ -4,7 +4,6 @@ import { useRef } from "react";
 import Hero from "@/components/Hero";
 import About from "@/components/About";
 import Building from "@/components/Building";
-import Projects from "@/components/Projects";
 import Skills from "@/components/Skills";
 import Footer from "@/components/Footer";
 
@@ -22,11 +21,6 @@ export default function Portfolio() {
       <div ref={portfolioRef}>
         <About />
         <Building />
-        <div className="max-w-5xl mx-auto px-6 md:px-12">
-          <div className="border-t border-white/5" />
-        </div>
-
-        <Projects />
         <div className="max-w-5xl mx-auto px-6 md:px-12">
           <div className="border-t border-white/5" />
         </div>
