@@ -117,21 +117,9 @@ const isLoggedIn = !!Astro.locals.user;
 		<EmDashBodyStart page={pageCtx} />
 		<header class="site-header">
 			<nav class="nav">
-				<a href="/" class="site-title">
-					{
-						siteLogo ? (
-							<img
-								src={siteLogo.url}
-								alt={siteLogo.alt || siteTitle}
-								class="site-logo-img"
-							/>
-						) : (
-							siteTitle
-						)
-					}
-				</a>
+                <a href="/blog" class="site-title">{siteTitle}</a>
 				<div class="nav-right">
-					<details class="nav-search"><summary aria-label="Search articles">Search</summary>
+					<details class="nav-search"><summary aria-label="Search articles" title="Search articles"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5" /><path d="m16 16 4.5 4.5" /></svg></summary>
                     <LiveSearch
 						placeholder="Search..."
 						class="site-search"
@@ -141,21 +129,7 @@ const isLoggedIn = !!Astro.locals.user;
 						collections={["posts", "pages"]}
 					/>
                     </details>
-					<div class="nav-links">
-						{
-							menu?.items.map((item) => (
-								<a
-									href={item.url}
-									target={item.target}
-									rel={
-										item.target === "_blank" ? "noopener noreferrer" : undefined
-									}
-								>
-									{item.label}
-								</a>
-							))
-						}
-					</div>
+                    <div class="nav-links"><a href="/">Portfolio ↗</a></div>
 				</div>
 				{
 					isLoggedIn && (
@@ -505,7 +479,9 @@ const isLoggedIn = !!Astro.locals.user;
 				color: var(--color-brand);
 			}
 
-			.site-logo-img {
+			.blog-avatar { width: 36px; height: 36px; border-radius: 50%; object-fit: cover; }
+
+            .site-logo-img {
 				height: 48px;
 				width: auto;
 				display: block;
@@ -820,12 +796,11 @@ const isLoggedIn = !!Astro.locals.user;
 
             @media (max-width: 640px) {
                 .site-header { position: relative; border-bottom: 1px solid var(--color-border); }
-                .nav { display: grid; grid-template-columns: minmax(0, 1fr) auto; height: auto; gap: 12px; padding: 16px; }
-                .site-title { grid-column: 1; grid-row: 1; font-size: 1.125rem; }
-                .nav-admin { grid-column: 2; grid-row: 1; margin: 0; font-size: .8125rem; }
-                .nav-right { grid-column: 1 / -1; grid-row: 2; display: flex; justify-content: space-between; width: 100%; margin: 0; gap: 16px; }
-                .nav-links { order: -1; display: flex; gap: 20px; font-size: .875rem; }
-                .nav-search { margin-left: auto; }
+                .nav { display: flex; height: 64px; gap: 12px; padding: 12px 16px; }
+                .site-title { flex-shrink: 0; }
+                .nav-right { display: flex; align-items: center; margin-left: auto; gap: 20px; }
+                .nav-links { order: -1; font-size: .875rem; }
+                .nav-admin { margin: 0; font-size: .75rem; }
 
 				.footer-grid {
 					grid-template-columns: 1fr;
