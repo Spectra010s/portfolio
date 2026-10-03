@@ -144,73 +144,47 @@ html {
   font-family: var(--font-display), serif;
 }
 
-.reveal {
-  opacity: 0;
-  transform: translateY(24px);
-  transition:
-    opacity 0.6s cubic-bezier(0.16, 1, 0.3, 1),
-    transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
-}
-
-.reveal.revealed {
+/* Always readable, even before React hydrates or if scripts fail. */
+.reveal, .reveal-left, .reveal-scale {
   opacity: 1;
-  transform: translateY(0);
+  transform: none;
 }
-
-.reveal-left {
-  opacity: 0;
-  transform: translateX(-24px);
-  transition:
-    opacity 0.6s cubic-bezier(0.16, 1, 0.3, 1),
-    transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+.reveal.revealed, .reveal-left.revealed, .reveal-scale.revealed {
+  animation: contentReveal 240ms ease-out both;
 }
-
-.reveal-left.revealed {
-  opacity: 1;
-  transform: translateX(0);
-}
-
-.reveal-scale {
-  opacity: 0;
-  transform: scale(0.95);
-  transition:
-    opacity 0.5s cubic-bezier(0.16, 1, 0.3, 1),
-    transform 0.5s cubic-bezier(0.16, 1, 0.3, 1);
-}
-
-.reveal-scale.revealed {
-  opacity: 1;
-  transform: scale(1);
+@keyframes contentReveal {
+  from { opacity: .85; transform: translateY(8px); }
+  to { opacity: 1; transform: none; }
 }
 
 .hero-enter {
-  animation: heroEnter 0.8s cubic-bezier(0.16, 1, 0.3, 1) both;
+  animation: heroEnter 0.3s ease-out both;
 }
 
 .hero-enter-delay-1 {
-  animation: heroEnter 0.8s cubic-bezier(0.16, 1, 0.3, 1) 0.1s both;
+  animation: heroEnter 0.3s ease-out both;
 }
 
 .hero-enter-delay-2 {
-  animation: heroEnter 0.8s cubic-bezier(0.16, 1, 0.3, 1) 0.2s both;
+  animation: heroEnter 0.3s ease-out both;
 }
 
 .hero-enter-delay-3 {
-  animation: heroEnter 0.8s cubic-bezier(0.16, 1, 0.3, 1) 0.35s both;
+  animation: heroEnter 0.3s ease-out both;
 }
 
 .hero-enter-delay-4 {
-  animation: heroEnter 0.8s cubic-bezier(0.16, 1, 0.3, 1) 0.5s both;
+  animation: heroEnter 0.3s ease-out both;
 }
 
 .hero-enter-delay-5 {
-  animation: heroEnter 0.8s cubic-bezier(0.16, 1, 0.3, 1) 0.65s both;
+  animation: heroEnter 0.3s ease-out both;
 }
 
 @keyframes heroEnter {
   from {
-    opacity: 0;
-    transform: translateY(20px);
+    opacity: .85;
+    transform: translateY(8px);
   }
   to {
     opacity: 1;
@@ -245,3 +219,15 @@ html {
 }
 
 :root { --font-geist-sans: "Geist", sans-serif; --font-geist-mono: "Geist Mono", monospace; --font-display: "Cormorant Garamond", serif; }
+
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .reveal, .reveal-left, .reveal-scale, [class*="hero-enter"], .pulse-dot {
+    animation: none;
+    transition: none;
+    opacity: 1;
+    transform: none;
+  }
+  .card-lift, .card-lift:hover { transition: none; transform: none; }
+}
