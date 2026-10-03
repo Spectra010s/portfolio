@@ -12,7 +12,18 @@ export function slugify(value: string) {
     .replace(/^-+|-+$/g, "");
 }
 
-export function getProjectPreviewPath(name: string, url?: string | null) {
-  if (url) return `https://v1.screenshot.11ty.dev/${encodeURIComponent(url)}/opengraph/`;
+export function getProjectPreviewPath(name: string) {
   return `/images/${slugify(name)}.png`;
+}
+
+export function getMicrolinkScreenshotUrl(url: string) {
+  const params = new URLSearchParams({
+    url,
+    meta: "false",
+    screenshot: "true",
+    embed: "screenshot.url",
+    "viewport.width": "1200",
+    "viewport.height": "630",
+  });
+  return `https://api.microlink.io/?${params}`;
 }
