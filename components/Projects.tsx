@@ -58,7 +58,7 @@ function ProjectCard({
   const previewSrc = getProjectPreviewPath(project.name);
 
   return (
-    <div className="stagger-card reveal-scale group relative flex flex-col rounded-2xl border border-white/10 bg-white/[0.03] overflow-hidden card-lift">
+    <div className="stagger-card reveal-scale group relative flex flex-col rounded-[4px] border border-white/10 bg-white/[0.03] overflow-hidden card-lift">
       <div className="absolute inset-0 bg-white/[0.02] opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
 
       {showPreview && (
