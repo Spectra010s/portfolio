@@ -109,7 +109,7 @@ export function buildJsonLd() {
         "@type": "WebPage",
         "@id": webpageId,
         url: pageUrl,
-        name: "Adeloye Adetayo | Spectra010s",
+        name: "Adeloye Adetayo | Mechatronics & Software Engineer",
         isPartOf: {
           "@id": websiteId,
         },
