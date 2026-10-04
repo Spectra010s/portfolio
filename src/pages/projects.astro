@@ -2,7 +2,7 @@
 import Projects from "../../components/Projects";
 import Footer from "../../components/Footer";
 import "../styles/portfolio.css";
-const title = "Projects | Adeloye Adetayo";
+const title = "Projects & Developer Tools | Adeloye Adetayo";
 const description = "Software, developer tools, products, and technical experiments by Adeloye Adetayo.";
 const canonical = new URL("/projects", Astro.site);
 ---
@@ -14,6 +14,7 @@ const canonical = new URL("/projects", Astro.site);
     <title>{title}</title>
     <meta name="description" content={description} />
     <link rel="canonical" href={canonical} />
+    <meta property="og:site_name" content="Adeloye Adetayo" />
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
     <meta property="og:url" content={canonical} />
