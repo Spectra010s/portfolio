@@ -52,9 +52,10 @@ if (Astro.cache?.enabled) {
 	Astro.cache.set(menuResult.cacheHint);
 }
 
-const { siteTitle, siteTagline } = resolveBlogSiteIdentity(
+const { siteTagline } = resolveBlogSiteIdentity(
 	settingsResult.data,
 );
+const siteTitle = "Adeloye Adetayo";
 const titleIncludesSiteName =
 	title === siteTitle ||
 	title.endsWith(` | ${siteTitle}`) ||
