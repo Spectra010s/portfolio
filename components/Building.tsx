@@ -5,7 +5,7 @@ import { useReveal, useStaggerReveal } from "@/hooks/useReveal";
 import pjs from "@/data/projects.json";
 import { getProjectPreviewPath } from "@/lib/utils";
 
-const buildingProjects = pjs.filter((p) => p.building).slice(0, 3);
+const buildingProjects = pjs.filter((p) => p.building);
 
 const categoryColors: Record<string, string> = {
   Web: "text-zinc-300 border-white/10 bg-white/[0.03]",
