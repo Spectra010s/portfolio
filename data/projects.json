@@ -5,7 +5,13 @@
     "category": "Web",
     "demo": "https://mycampuslib.vercel.app",
     "github": null,
-    "tech": ["Next.js", "React", "TypeScript", "Supabase", "PLpgSQL"],
+    "tech": [
+      "Next.js",
+      "React",
+      "TypeScript",
+      "Supabase",
+      "PLpgSQL"
+    ],
     "featured": true,
     "building": true
   },
@@ -15,7 +21,13 @@
     "category": "Product",
     "demo": "https://www.flowbonds.com",
     "github": null,
-    "tech": ["Vite", "React", "TypeScript", "Cloudflare Functions", "Supabase"],
+    "tech": [
+      "Vite",
+      "React",
+      "TypeScript",
+      "Cloudflare Functions",
+      "Supabase"
+    ],
     "featured": true,
     "building": true
   },
@@ -25,7 +37,13 @@
     "category": "Product",
     "demo": "https://namtesfuoye.org",
     "github": null,
-    "tech": ["Next.js", "TypeScript", "Better Auth", "Prisma", "Supabase"],
+    "tech": [
+      "Next.js",
+      "TypeScript",
+      "Better Auth",
+      "Prisma",
+      "Supabase"
+    ],
     "featured": true,
     "building": true
   },
@@ -35,7 +53,13 @@
     "category": "Product",
     "demo": "https://fildtek.com",
     "github": null,
-    "tech": ["Next.js", "TypeScript", "Hono", "PostgreSQL", "Drizzle"],
+    "tech": [
+      "Next.js",
+      "TypeScript",
+      "Hono",
+      "PostgreSQL",
+      "Drizzle"
+    ],
     "featured": false,
     "building": true
   },
@@ -45,8 +69,16 @@
     "category": "CLI",
     "demo": "https://portal.biuld.app",
     "github": "https://github.com/Spectra010s/portal",
-    "tech": ["Rust", "Next.js", "MDX", "Nextra"],
-    "tags": ["Hiverra", "Open Source"],
+    "tech": [
+      "Rust",
+      "Next.js",
+      "MDX",
+      "Nextra"
+    ],
+    "tags": [
+      "Hiverra",
+      "Open Source"
+    ],
     "featured": true,
     "building": true
   },
@@ -56,7 +88,11 @@
     "category": "CLI",
     "demo": "https://gitaic.pages.dev",
     "github": "https://github.com/Spectra010s/git-aic",
-    "tech": ["Astro", "TypeScript", "React"],
+    "tech": [
+      "Astro",
+      "TypeScript",
+      "React"
+    ],
     "featured": true,
     "building": false
   },
@@ -66,7 +102,9 @@
     "category": "CLI",
     "demo": null,
     "github": "https://github.com/Spectra010s/gshell",
-    "tech": ["Shell"],
+    "tech": [
+      "Shell"
+    ],
     "featured": false,
     "building": false
   },
@@ -76,8 +114,13 @@
     "category": "CLI",
     "demo": null,
     "github": "https://github.com/Spectra010s/junks",
-    "tech": ["Bash", "Shell"],
-    "tags": ["Open Source"],
+    "tech": [
+      "Bash",
+      "Shell"
+    ],
+    "tags": [
+      "Open Source"
+    ],
     "featured": false,
     "building": false
   },
@@ -87,8 +130,12 @@
     "category": "CLI",
     "demo": null,
     "github": "https://github.com/Spectra010s/fstrace",
-    "tech": ["Rust"],
-    "tags": ["Open Source"],
+    "tech": [
+      "Rust"
+    ],
+    "tags": [
+      "Open Source"
+    ],
     "featured": false,
     "building": false
   },
@@ -98,8 +145,13 @@
     "category": "CLI",
     "demo": null,
     "github": "https://github.com/Spectra010s/fcp",
-    "tech": ["Node.js", "JavaScript"],
-    "tags": ["Open Source"],
+    "tech": [
+      "Node.js",
+      "JavaScript"
+    ],
+    "tags": [
+      "Open Source"
+    ],
     "featured": false,
     "building": false
   },
@@ -109,8 +161,13 @@
     "category": "CLI",
     "demo": null,
     "github": "https://github.com/Spectra010s/term-invader",
-    "tags": ["Open Source"],
-    "tech": ["Node.js", "JavaScript"],
+    "tags": [
+      "Open Source"
+    ],
+    "tech": [
+      "Node.js",
+      "JavaScript"
+    ],
     "featured": false,
     "building": false
   },
@@ -120,8 +177,15 @@
     "category": "Web",
     "demo": "https://term-invader.vercel.app",
     "github": null,
-    "tech": ["Vite.js", "WebContainers", "xterm.js", "JavaScript"],
-    "tags": ["Open Source"],
+    "tech": [
+      "Vite.js",
+      "WebContainers",
+      "xterm.js",
+      "JavaScript"
+    ],
+    "tags": [
+      "Open Source"
+    ],
     "featured": false,
     "building": false
   },
@@ -131,7 +195,11 @@
     "category": "Web",
     "demo": "https://blend.biuld.app",
     "github": "https://github.com/Spectra010s/blend",
-    "tech": ["Next.js", "React", "TypeScript"],
+    "tech": [
+      "Next.js",
+      "React",
+      "TypeScript"
+    ],
     "featured": false,
     "building": false
   },
@@ -141,7 +209,9 @@
     "category": "CLI",
     "demo": null,
     "github": "https://github.com/Spectra010s/autopdf",
-    "tech": ["Python"],
+    "tech": [
+      "Python"
+    ],
     "featured": false,
     "building": false
   },
@@ -151,8 +221,12 @@
     "category": "Library",
     "demo": null,
     "github": "https://github.com/Spectra010s/makest",
-    "tech": ["TypeScript"],
-    "tags": ["Open Source"],
+    "tech": [
+      "TypeScript"
+    ],
+    "tags": [
+      "Open Source"
+    ],
     "featured": false,
     "building": false
   },
@@ -162,8 +236,14 @@
     "category": "Web3",
     "demo": "https://Spectra010s.github.io/Honeycomb-Nexus",
     "github": "https://github.com/Spectra010s/Honeycomb-Nexus",
-    "tags": ["Open Source"],
-    "tech": ["HTML", "CSS", "JavaScript"],
+    "tags": [
+      "Open Source"
+    ],
+    "tech": [
+      "HTML",
+      "CSS",
+      "JavaScript"
+    ],
     "featured": false,
     "building": false
   },
@@ -173,7 +253,12 @@
     "category": "Freelance",
     "demo": "https://starms-catering.rf.gd",
     "github": null,
-    "tech": ["HTML", "CSS", "JavaScript", "PHP"],
+    "tech": [
+      "HTML",
+      "CSS",
+      "JavaScript",
+      "PHP"
+    ],
     "featured": false,
     "building": false
   },
@@ -183,7 +268,11 @@
     "category": "Freelance",
     "demo": "https://vickotimz.vercel.app",
     "github": null,
-    "tech": ["Next.js", "React", "TypeScript"],
+    "tech": [
+      "Next.js",
+      "React",
+      "TypeScript"
+    ],
     "featured": false,
     "building": false
   },
@@ -193,8 +282,12 @@
     "category": "Library",
     "demo": null,
     "github": "https://github.com/Spectra010s/rustlrn",
-    "tech": ["Rust"],
-    "tags": ["Open Source"],
+    "tech": [
+      "Rust"
+    ],
+    "tags": [
+      "Open Source"
+    ],
     "featured": false,
     "building": false
   },
@@ -204,8 +297,12 @@
     "category": "Hardware",
     "demo": null,
     "github": "https://github.com/Spectra010s/Capstone",
-    "tech": ["C++"],
-    "tags": ["Open Source"],
+    "tech": [
+      "C++"
+    ],
+    "tags": [
+      "Open Source"
+    ],
     "featured": false,
     "building": false
   },
@@ -215,8 +312,15 @@
     "category": "Contribution",
     "demo": "https://explainthisrepo.com",
     "github": "https://github.com/Spectra010s/ExplainThisRepo",
-    "tags": ["Open Source"],
-    "tech": ["Python", "TypeScript", "Nextjs", "JavaScript"],
+    "tags": [
+      "Open Source"
+    ],
+    "tech": [
+      "Python",
+      "TypeScript",
+      "Nextjs",
+      "JavaScript"
+    ],
     "featured": false,
     "building": false
   },
@@ -226,8 +330,12 @@
     "category": "Contribution",
     "demo": "https://zap-dun-zeta.vercel.app",
     "github": "https://github.com/Spectra010s/Zap",
-
-    "tech": ["Python", "JavaScript", "CSS", "HTML"],
+    "tech": [
+      "Python",
+      "JavaScript",
+      "CSS",
+      "HTML"
+    ],
     "featured": false,
     "building": false
   },
@@ -237,9 +345,39 @@
     "category": "Product",
     "demo": "https://biuld.app",
     "github": null,
-    "tech": ["Electron.js", "Next.js", "Express.js", "Socket.IO", "PostgreSQL"],
-    "tags": ["Hiverra"],
+    "tech": [
+      "Electron.js",
+      "Next.js",
+      "Express.js",
+      "Socket.IO",
+      "PostgreSQL"
+    ],
+    "tags": [
+      "Hiverra"
+    ],
     "featured": false,
+    "building": true
+  },
+  {
+    "name": "ProtoPilot",
+    "description": "An AI-powered electronics design assistant that helps turn ideas into validated circuit designs, breadboard layouts, and firmware.",
+    "category": "Hardware",
+    "demo": "https://protopilot.spectra010s.com",
+    "github": "https://github.com/Spectra010s/protopilot",
+    "tech": [
+      "Next.js",
+      "TypeScript",
+      "Gemma 4",
+      "tscircuit",
+      "RunFrame"
+    ],
+    "tags": [
+      "AI",
+      "Electronics",
+      "Circuit Design",
+      "Hardware"
+    ],
+    "featured": true,
     "building": true
   }
 ]
