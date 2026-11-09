@@ -3,7 +3,7 @@
     "name": "My Campus Library",
     "description": "A digital library for study materials, past questions, and academic resources.",
     "category": "Web",
-    "demo": "https://mycampuslib.vercel.app",
+    "demo": "https://mycampuslibrary.com",
     "github": null,
     "tech": [
       "Next.js",
@@ -67,7 +67,7 @@
     "name": "Portal",
     "description": "A Hiverra file transfer CLI for simple, reliable sharing across devices, with discovery mode and direct IP transfers.",
     "category": "CLI",
-    "demo": "https://portal.biuld.app",
+    "demo": "https://portal.spectra010s.com",
     "github": "https://github.com/Spectra010s/portal",
     "tech": [
       "Rust",
@@ -86,7 +86,7 @@
     "name": "Git-AIC",
     "description": "AI-powered Git commit generator using Google Gemini.",
     "category": "CLI",
-    "demo": "https://gitaic.pages.dev",
+    "demo": "https://git-aic.pages.dev",
     "github": "https://github.com/Spectra010s/git-aic",
     "tech": [
       "Astro",
@@ -343,7 +343,7 @@
     "name": "Biuld",
     "description": "A Hiverra product exploring collaborative developer workflows, code, chat, and control in one workspace.",
     "category": "Product",
-    "demo": "https://biuld.app",
+    "demo": "https://biuld.spectra010s.com",
     "github": null,
     "tech": [
       "Electron.js",
