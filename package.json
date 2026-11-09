@@ -8,7 +8,8 @@
     "start": "wrangler dev",
     "preview": "wrangler dev",
     "check": "astro check",
-    "deploy": "astro build && wrangler deploy"
+    "deploy": "astro build && wrangler deploy",
+    "sync:previews": "node scripts/sync-project-previews.mjs"
   },
   "dependencies": {
     "@radix-ui/react-slot": "^1.2.4",
