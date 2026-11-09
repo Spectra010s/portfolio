@@ -11,10 +11,13 @@ npm install
 cp .dev.vars.example .dev.vars
 npx emdash secrets generate
 # Put the generated key in .dev.vars as EMDASH_ENCRYPTION_KEY.
+npm run sync:previews # Fetch missing project screenshots into public/images
 npm run dev
 ```
 
 Local D1 and R2 data are persisted under `.wrangler/`. Open http://localhost:4321, `/blog`, or `/_emdash/admin/` to complete CMS setup with your own account/passkey. The seed provides collections, categories, and tags without sample articles. Keep `.dev.vars` private.
+
+Project screenshots are stored as static files in `public/images/`. The sync command downloads only missing previews; it does not call Microlink when visitors load the site. Commit the generated image files with your code changes. To deliberately refresh screenshots, run `npm run sync:previews -- --refresh` and commit the replacements.
 
 ## Deploy to Cloudflare
 
@@ -38,6 +41,7 @@ Store the encryption key as a Worker secret, never in Wrangler vars or Git. Back
 
 ```bash
 npm run check
+npm run sync:previews
 npm run build
 npm run preview
 npm run deploy
