@@ -15,15 +15,3 @@ export function slugify(value: string) {
 export function getProjectPreviewPath(name: string) {
   return `/images/${slugify(name)}.png`;
 }
-
-export function getMicrolinkScreenshotUrl(url: string) {
-  const params = new URLSearchParams({
-    url,
-    meta: "false",
-    screenshot: "true",
-    embed: "screenshot.url",
-    "viewport.width": "1200",
-    "viewport.height": "630",
-  });
-  return `https://api.microlink.io/?${params}`;
-}
