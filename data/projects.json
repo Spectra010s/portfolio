@@ -357,21 +357,6 @@
     "building": false
   },
   {
-    "name": "Zap",
-    "description": "AI-powered online accounting platform using voice commands and natural language.",
-    "category": "Contribution",
-    "demo": null,
-    "github": "https://github.com/Spectra010s/Zap",
-    "tech": [
-      "Python",
-      "JavaScript",
-      "CSS",
-      "HTML"
-    ],
-    "featured": false,
-    "building": false
-  },
-  {
     "name": "Biuld",
     "description": "A Hiverra product exploring collaborative developer workflows, code, chat, and control in one workspace.",
     "category": "Product",
@@ -441,7 +426,7 @@
     "tags": [
       "Open Source"
     ],
-    "featured": false,
+    "featured": true,
     "building": false
   },
   {
@@ -527,6 +512,21 @@
     ],
     "tags": [
       "Open Source"
+    ],
+    "featured": false,
+    "building": false
+  },
+  {
+    "name": "Zap",
+    "description": "AI-powered online accounting platform using voice commands and natural language.",
+    "category": "Contribution",
+    "demo": null,
+    "github": "https://github.com/Spectra010s/Zap",
+    "tech": [
+      "Python",
+      "JavaScript",
+      "CSS",
+      "HTML"
     ],
     "featured": false,
     "building": false

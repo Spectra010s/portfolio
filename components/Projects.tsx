@@ -7,6 +7,7 @@ import pjs from "@/data/projects.json";
 import { getProjectPreviewPath } from "@/lib/utils";
 
 const CATEGORIES = [
+  "Product",
   "Web",
   "Mobile App",
   "CLI",
@@ -15,7 +16,6 @@ const CATEGORIES = [
   "Web3",
   "Freelance",
   "Contribution",
-  "Product",
 ];
 type Project = (typeof pjs)[number] & { tags?: string[] };
 
