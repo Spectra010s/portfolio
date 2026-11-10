@@ -126,8 +126,8 @@
   },
   {
     "name": "fstrace",
-    "description": "A lightweight Rust CLI for watching files and folders, with exclude rules and JSON output for scripts and tooling.",
-    "category": "CLI",
+    "description": "A lightweight Rust file system watcher available as a library and CLI.",
+    "category": "Library",
     "demo": null,
     "github": "https://github.com/Spectra010s/fstrace",
     "tech": [
@@ -405,6 +405,23 @@
       "Rust",
       "Serde",
       "Tokio"
+    ],
+    "tags": [
+      "Open Source"
+    ],
+    "featured": false,
+    "building": false
+  },
+  {
+    "name": "fsmirror",
+    "description": "A Rust CLI for mirroring files and folders once or continuously as they change.",
+    "category": "CLI",
+    "demo": null,
+    "github": "https://github.com/Spectra010s/fsmirror",
+    "tech": [
+      "Rust",
+      "fstrace",
+      "Clap"
     ],
     "tags": [
       "Open Source"
