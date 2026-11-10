@@ -553,9 +553,9 @@
     "demo": null,
     "github": "https://github.com/Spectra010s/d-vercel",
     "tech": [
-      "TypeScript",
       "GitHub Actions",
-      "CI/CD"
+      "CI/CD",
+      "TypeScript"
     ],
     "featured": false,
     "building": false
@@ -567,10 +567,9 @@
     "demo": null,
     "github": "https://github.com/Spectra010s/opencode-termux",
     "tech": [
-      "Shell",
       "C",
       "Python",
-      "Makefile"
+      "Bun"
     ],
     "tags": [
       "Open Source"
