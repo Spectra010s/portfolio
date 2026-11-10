@@ -9,7 +9,8 @@
     "preview": "wrangler dev",
     "check": "astro check",
     "deploy": "npm run build && wrangler deploy",
-    "sync:previews": "node scripts/sync-project-previews.mjs"
+    "sync:previews": "node scripts/sync-project-previews.mjs",
+    "pin": "npx pkgpin"
   },
   "dependencies": {
     "@radix-ui/react-slot": "^1.2.4",
