@@ -16,7 +16,7 @@ npm run dev
 
 Local D1 and R2 data are persisted under `.wrangler/`. Open http://localhost:4321, `/blog`, or `/_emdash/admin/` to complete CMS setup with your own account/passkey. The seed provides collections, categories, and tags without sample articles. Keep `.dev.vars` private.
 
-Project preview screenshots are fetched from Microlink automatically by `npm run build`. Astro builds first, then the screenshots are written into `dist/images/`, which is part of the deployed static asset directory. The generated images are not committed to Git, and visitors load them from the portfolio deployment rather than calling Microlink. Each new build fetches fresh screenshots. If a screenshot cannot be fetched, the build fails instead of silently deploying missing previews.
+Project preview screenshots are fetched from WordPress.com mShots by Astro's `astro:build:done` hook. They are written into `dist/client/images/`, the Cloudflare adapter's static asset directory. The generated images are not committed to Git, and visitors load them from the portfolio deployment. Each build requests screenshots; mShots may serve cached captures. It can briefly return a default image while generating a new screenshot, so the build waits for the actual capture. If a screenshot cannot be fetched, the build fails instead of silently deploying missing previews.
 
 ## Deploy to Cloudflare
 

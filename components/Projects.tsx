@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { Github, ExternalLink, Globe } from "lucide-react";
+import { Github, ExternalLink } from "lucide-react";
 import { useReveal, useStaggerRevealOnChange } from "@/hooks/useReveal";
 import pjs from "@/data/projects.json";
 import { getProjectPreviewPath } from "@/lib/utils";
@@ -16,7 +16,6 @@ const CATEGORIES = [
   "Contribution",
   "Product",
 ];
-const PREVIEW_PROJECTS = new Set(["Term-Invader Console"]);
 type Project = (typeof pjs)[number] & { tags?: string[] };
 
 const categoryColors: Record<string, string> = {
@@ -44,41 +43,25 @@ function SectionHeader({ category }: { category: string }) {
   );
 }
 
-function ProjectCard({
-  project,
-  featured = false,
-}: {
-  project: Project;
-  featured?: boolean;
-}) {
-  const showPreview =
-    featured ||
-    project.category === "Freelance" ||
-    PREVIEW_PROJECTS.has(project.name);
+function ProjectCard({ project }: { project: Project }) {
   const previewSrc = getProjectPreviewPath(project.name);
 
   return (
     <div className="stagger-card reveal-scale group relative flex flex-col rounded-[4px] border border-white/10 bg-white/[0.03] overflow-hidden card-lift">
       <div className="absolute inset-0 bg-white/[0.02] opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
 
-      {showPreview && (
-        <div className="relative w-full aspect-video overflow-hidden border-b border-white/5 bg-[#111215]">
-          {project.demo ? (
-            <img
-              src={previewSrc}
-              alt={`${project.name} preview`}
-              loading="lazy"
-              decoding="async"
-              onError={(event) => { if (event.currentTarget.parentElement) event.currentTarget.parentElement.hidden = true; }}
-              width={1200}
-              height={675}
-              className="w-full h-full object-contain opacity-80 group-hover:opacity-100 group-hover:scale-105 transition-all duration-500"
-            />
-          ) : (
-            <div className="w-full h-full flex items-center justify-center">
-              <Globe className="w-10 h-10 text-gray-700" />
-            </div>
-          )}
+      {project.demo && (
+        <div className="relative w-full aspect-[40/21] overflow-hidden border-b border-white/5 bg-[#111215]">
+          <img
+            src={previewSrc}
+            alt={`${project.name} preview`}
+            loading="lazy"
+            decoding="async"
+            onError={(event) => { if (event.currentTarget.parentElement) event.currentTarget.parentElement.hidden = true; }}
+            width={1200}
+            height={630}
+            className="w-full h-full object-contain opacity-80 group-hover:opacity-100 transition-all duration-500"
+          />
         </div>
       )}
 
@@ -162,11 +145,7 @@ function CategorySection({ category }: { category: string }) {
       <SectionHeader category={category} />
       <div ref={gridRef} className="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
         {all.map((project) => (
-          <ProjectCard
-            key={project.name}
-            project={project}
-            featured={project.featured}
-          />
+          <ProjectCard key={project.name} project={project} />
         ))}
       </div>
 

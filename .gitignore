@@ -14,7 +14,7 @@
 /coverage
 
 # next.js
-/.next/
+/.next
 /out/
 
 # production
@@ -50,3 +50,4 @@ uploads/
 
 .wrangler/
 .dev.vars
+.emdash/

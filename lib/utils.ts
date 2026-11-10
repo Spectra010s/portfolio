@@ -13,5 +13,5 @@ export function slugify(value: string) {
 }
 
 export function getProjectPreviewPath(name: string) {
-  return `/images/${slugify(name)}.png`;
+  return `/images/${slugify(name)}.jpg`;
 }

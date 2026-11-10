@@ -2,7 +2,7 @@
   {
     "name": "My Campus Library",
     "description": "A digital library for study materials, past questions, and academic resources.",
-    "category": "Web",
+    "category": "Product",
     "demo": "https://mycampuslibrary.com",
     "github": null,
     "tech": [
@@ -34,7 +34,7 @@
   {
     "name": "NAMTES FUOYE Hub",
     "description": "The official NAMTES FUOYE platform for projects, news, technical growth, innovation, and student-led impact in mechatronics engineering.",
-    "category": "Product",
+    "category": "Web",
     "demo": "https://namtesfuoye.org",
     "github": null,
     "tech": [

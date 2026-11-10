@@ -41,11 +41,11 @@ export default function Building() {
             className="stagger-card reveal-scale group relative block rounded-[4px] border border-white/10 bg-white/[0.03] p-6 card-lift hover:border-white/20"
           >
             {project.demo && (
-              <div className="relative -mx-6 -mt-6 mb-6 aspect-video overflow-hidden rounded-t-[4px] border-b border-white/10">
+              <div className="relative -mx-6 -mt-6 mb-6 aspect-[40/21] overflow-hidden rounded-t-[4px] border-b border-white/10 bg-[#111215]">
                 <img src={getProjectPreviewPath(project.name)}
                   alt={`${project.name} preview`} width={1200} height={630}
                   loading="lazy" decoding="async"
-                  className="w-full h-full object-cover"
+                  className="w-full h-full object-contain"
                   onError={(event) => { if (event.currentTarget.parentElement) event.currentTarget.parentElement.hidden = true; }}
                 />
               </div>
