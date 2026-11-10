@@ -464,5 +464,23 @@
     ],
     "featured": false,
     "building": false
+  },
+  {
+    "name": "Stenion",
+    "description": "Continuous on-chain risk scoring for Stellar and Soroban DeFi markets, with a public, auditable methodology.",
+    "category": "Contribution",
+    "demo": "https://stenion.vercel.app",
+    "github": "https://github.com/stenion-lab/stenion",
+    "tech": [
+      "Next.js",
+      "TypeScript",
+      "PostgreSQL",
+      "Soroban"
+    ],
+    "tags": [
+      "Open Source"
+    ],
+    "featured": false,
+    "building": false
   }
 ]
