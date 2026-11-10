@@ -97,6 +97,22 @@
     "building": false
   },
   {
+    "name": "pkgpin",
+    "description": "A Node.js CLI for updating and pinning dependency versions across JavaScript workspaces.",
+    "category": "CLI",
+    "demo": null,
+    "github": "https://github.com/Spectra010s/pkgpin",
+    "tech": [
+      "JavaScript",
+      "Node.js"
+    ],
+    "tags": [
+      "Open Source"
+    ],
+    "featured": false,
+    "building": false
+  },
+  {
     "name": "gshell",
     "description": "gcloud cloud-shell, but simpler.",
     "category": "CLI",
@@ -243,6 +259,22 @@
       "HTML",
       "CSS",
       "JavaScript"
+    ],
+    "featured": false,
+    "building": false
+  },
+  {
+    "name": "ArmMint",
+    "description": "A Telegram-first NFT minting scheduler for managing burner wallets, mint jobs, and transaction updates.",
+    "category": "Web3",
+    "demo": null,
+    "github": "https://github.com/Spectra010s/armmint",
+    "tech": [
+      "Next.js",
+      "TypeScript",
+      "PostgreSQL",
+      "Drizzle",
+      "Viem"
     ],
     "featured": false,
     "building": false
@@ -476,6 +508,22 @@
       "TypeScript",
       "PostgreSQL",
       "Soroban"
+    ],
+    "tags": [
+      "Open Source"
+    ],
+    "featured": false,
+    "building": false
+  },
+  {
+    "name": "Sendra",
+    "description": "A terminal-native HTTP client for running and testing API requests defined in YAML files.",
+    "category": "Contribution",
+    "demo": "https://sendra.oyibe.dev",
+    "github": "https://github.com/sendra-lab/Sendra",
+    "tech": [
+      "Rust",
+      "YAML"
     ],
     "tags": [
       "Open Source"
