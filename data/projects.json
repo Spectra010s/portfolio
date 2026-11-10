@@ -428,5 +428,21 @@
     ],
     "featured": false,
     "building": false
+  },
+  {
+    "name": "ClipFind",
+    "description": "An AI-powered movie identification app that matches uploaded clips or social video links to film details.",
+    "category": "Contribution",
+    "demo": "https://clipfind.netlify.app",
+    "github": "https://github.com/FortuneNnah/ClipFind",
+    "tech": [
+      "React",
+      "Node.js",
+      "Express",
+      "MongoDB",
+      "Google Gemini"
+    ],
+    "featured": false,
+    "building": false
   }
 ]
