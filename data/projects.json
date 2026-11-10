@@ -545,5 +545,19 @@
     ],
     "featured": false,
     "building": false
+  },
+  {
+    "name": "d-vercel",
+    "description": "A GitHub Action that seamlessly deploys frontend and full-stack applications to Vercel.",
+    "category": "Tooling",
+    "demo": null,
+    "github": "https://github.com/Spectra010s/d-vercel",
+    "tech": [
+      "TypeScript",
+      "GitHub Actions",
+      "CI/CD"
+    ],
+    "featured": false,
+    "building": false
   }
 ]
