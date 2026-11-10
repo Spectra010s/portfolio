@@ -559,5 +559,23 @@
     ],
     "featured": false,
     "building": false
+  },
+  {
+    "name": "opencode-termux",
+    "description": "An Android port of OpenCode, the AI-powered terminal coding assistant, shipped as a native Termux binary with no PRoot, Node.js, or root required.",
+    "category": "Tooling",
+    "demo": null,
+    "github": "https://github.com/Spectra010s/opencode-termux",
+    "tech": [
+      "Shell",
+      "C",
+      "Python",
+      "Makefile"
+    ],
+    "tags": [
+      "Open Source"
+    ],
+    "featured": true,
+    "building": false
   }
 ]
