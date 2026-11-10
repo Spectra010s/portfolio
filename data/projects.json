@@ -444,5 +444,25 @@
     ],
     "featured": false,
     "building": false
+  },
+  {
+    "name": "Replex",
+    "description": "A tool that turns websites into ready-to-share demo videos by recording responsive browser sessions automatically.",
+    "category": "Contribution",
+    "demo": "https://replex-nine.vercel.app",
+    "github": "https://github.com/Just-Tara/Replex",
+    "tech": [
+      "Next.js",
+      "TypeScript",
+      "Playwright",
+      "BullMQ",
+      "Redis",
+      "MongoDB"
+    ],
+    "tags": [
+      "Open Source"
+    ],
+    "featured": false,
+    "building": false
   }
 ]
