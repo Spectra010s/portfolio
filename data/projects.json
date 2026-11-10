@@ -220,6 +220,21 @@
     "building": false
   },
   {
+    "name": "Iamveektoria",
+    "description": "A personal portfolio for Victoria Enebeli, showcasing her Web3 work, speaking, and community ventures.",
+    "category": "Web",
+    "demo": "https://iamveektoria.vercel.app",
+    "github": null,
+    "tech": [
+      "React",
+      "TypeScript",
+      "TanStack Start",
+      "Tailwind CSS"
+    ],
+    "featured": true,
+    "building": false
+  },
+  {
     "name": "autopdf",
     "description": "Create PDFs with Python.",
     "category": "CLI",
