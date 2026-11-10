@@ -10,7 +10,7 @@
     "check": "astro check",
     "deploy": "npm run build && wrangler deploy",
     "sync:previews": "node scripts/sync-project-previews.mjs",
-    "pin": "npx pkgpin"
+    "pin": "pkgpin"
   },
   "dependencies": {
     "@radix-ui/react-slot": "^1.2.4",
@@ -43,7 +43,8 @@
     "typescript": "^5",
     "@astrojs/check": "^0.9.10",
     "wrangler": "^4.125.0",
-    "@cloudflare/workers-types": "^5.20260820.1"
+    "@cloudflare/workers-types": "^5.20260820.1",
+    "pkgpin": "^0.3.0"
   },
   "allowScripts": {
     "sharp@0.34.5": true,
