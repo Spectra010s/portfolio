@@ -3,6 +3,7 @@
   "prefix": "^",
   "exclude": [
     "typescript",
-    "eslint"
+    "eslint",
+    "lucide-react"
   ]
 }
