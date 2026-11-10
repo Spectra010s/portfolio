@@ -8,6 +8,7 @@ import { getProjectPreviewPath } from "@/lib/utils";
 
 const CATEGORIES = [
   "Web",
+  "Mobile App",
   "CLI",
   "Library",
   "Hardware",
@@ -20,6 +21,7 @@ type Project = (typeof pjs)[number] & { tags?: string[] };
 
 const categoryColors: Record<string, string> = {
   Web: "text-zinc-300 border-white/10 bg-white/[0.03]",
+  "Mobile App": "text-zinc-300 border-white/10 bg-white/[0.03]",
   CLI: "text-zinc-300 border-white/10 bg-white/[0.03]",
   Library: "text-zinc-300 border-white/10 bg-white/[0.03]",
   Hardware: "text-zinc-300 border-white/10 bg-white/[0.03]",

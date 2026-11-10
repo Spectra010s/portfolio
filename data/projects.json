@@ -379,5 +379,20 @@
     ],
     "featured": true,
     "building": true
+  },
+  {
+    "name": "Lurc",
+    "description": "A native Android API client for building, sending, and inspecting HTTP requests directly from your phone.",
+    "category": "Mobile App",
+    "demo": null,
+    "github": "https://github.com/Spectra010s/lurc",
+    "tech": [
+      "Flutter",
+      "Dart",
+      "Riverpod",
+      "Dio"
+    ],
+    "featured": false,
+    "building": false
   }
 ]
