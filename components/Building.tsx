@@ -21,7 +21,7 @@ export default function Building() {
     <section className="py-20 px-6 md:px-12 max-w-5xl mx-auto">
       <div ref={headerRef} className="reveal mb-10">
         <div className="flex items-center gap-3 mb-2">
-          <span className="w-2 h-2 rounded-full bg-zinc-300 shadow-lg shadow-white/20 pulse-dot" />
+          <span className="w-2 h-2 rounded-full bg-zinc-300" />
           <span className="font-mono text-xs tracking-[0.2em] text-zinc-300 uppercase">
             Currently Building
           </span>

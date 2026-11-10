@@ -62,7 +62,7 @@ function ProjectCard({ project }: { project: Project }) {
             onError={(event) => { if (event.currentTarget.parentElement) event.currentTarget.parentElement.hidden = true; }}
             width={1200}
             height={630}
-            className="w-full h-full object-contain opacity-80 group-hover:opacity-100 transition-all duration-500"
+            className="w-full h-full object-contain"
           />
         </div>
       )}
@@ -93,13 +93,13 @@ function ProjectCard({ project }: { project: Project }) {
           {project.tech.slice(0, 4).map((t) => (
             <span
               key={t}
-              className="font-mono text-[10px] px-2 py-0.5 rounded border border-white/10 text-gray-600"
+              className="font-mono text-xs px-2 py-0.5 rounded border border-white/10 text-gray-500 group-hover:text-zinc-300 transition-colors"
             >
               {t}
             </span>
           ))}
           {project.tech.length > 4 && (
-            <span className="font-mono text-[10px] px-2 py-0.5 rounded border border-white/10 text-gray-600">
+            <span className="font-mono text-xs px-2 py-0.5 rounded border border-white/10 text-gray-500 group-hover:text-zinc-300 transition-colors">
               +{project.tech.length - 4}
             </span>
           )}

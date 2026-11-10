@@ -209,7 +209,7 @@
     "name": "Blend",
     "description": "An app that provides you with tools used for multitasking.",
     "category": "Web",
-    "demo": "https://blend.biuld.app",
+    "demo": "https://blend.spectra010s.com",
     "github": "https://github.com/Spectra010s/blend",
     "tech": [
       "Next.js",
@@ -360,7 +360,7 @@
     "name": "Zap",
     "description": "AI-powered online accounting platform using voice commands and natural language.",
     "category": "Contribution",
-    "demo": "https://zap-dun-zeta.vercel.app",
+    "demo": null,
     "github": "https://github.com/Spectra010s/Zap",
     "tech": [
       "Python",

@@ -63,8 +63,8 @@ export default function About() {
               key={group.label}
               className="relative grid gap-3 md:grid-cols-[120px_1fr] md:gap-6"
             >
-              <div className="absolute -left-[25px] top-1.5 h-2.5 w-2.5 rounded-full border border-white/20 bg-background" />
-              <div className="font-mono text-[11px] uppercase tracking-[0.18em] text-gray-500">
+              <div className={`absolute -left-[25px] top-1.5 h-2.5 w-2.5 rounded-full ${group.label === "Current" ? "bg-white" : "border border-white/20 bg-background"}`} />
+              <div className={`font-mono text-[11px] uppercase tracking-[0.18em] ${group.label === "Current" ? "text-white" : "text-gray-500"}`}>
                 {group.label}
               </div>
               <div className="grid gap-3">
