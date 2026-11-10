@@ -394,5 +394,22 @@
     ],
     "featured": false,
     "building": false
+  },
+  {
+    "name": "dotcfg",
+    "description": "A flexible configuration management library for Rust applications.",
+    "category": "Library",
+    "demo": "https://dotcfg.spectra010s.com",
+    "github": "https://github.com/Spectra010s/dotcfg",
+    "tech": [
+      "Rust",
+      "Serde",
+      "Tokio"
+    ],
+    "tags": [
+      "Open Source"
+    ],
+    "featured": false,
+    "building": false
   }
 ]
